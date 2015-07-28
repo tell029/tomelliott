@@ -1,13 +1,9 @@
-jekyll-gulp-sass-browser-sync
+Tom Elliott's Website
 =============================
 
-A starter project including full setup for Jekyll, GulpJS, SASS, AutoPrefixer &amp; BrowserSync
+I'm developing a website. This is where it lives (for now?).
 
-Here's a 1.5min [screencast](http://quick.as/pvrslgx) showing what you get.
-
-And here's a GIF showing the CSS injecting.
-
-![GIF](http://f.cl.ly/items/373y2E0e0i2p0E2O131g/test-gif.gif)
+I used the `jekyll-gulp-sass-browser-sync` environment to make things easier to play with. The following information comes from that.
 
 ## System Preparation
 
