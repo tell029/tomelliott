@@ -1,0 +1,22 @@
+mixin nav-content()
+  ul
+    li: a(href="#about") About
+    li: a(href="#research") Research
+    li: a(href="#projects") Projects
+    li: a(href="#contact") Contact
+
+.mobile-nav
+  +nav-content()
+
+header
+  .header-position
+    h1.logo Tom Elliott
+
+    nav.site-nav
+      +nav-content()
+
+    .social-buttons
+      a(href="http://twitter.com/tomelliot90").twitter Twitter
+      a(href="http://github.com/tell029").github GitHub
+
+    .mobile-nav-toggle: span

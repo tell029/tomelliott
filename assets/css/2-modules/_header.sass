@@ -1,0 +1,155 @@
+.home-wrap
+  header
+    width: $sidebar-width
+    background: rgba(255, 255, 255, 0.2)
+    padding: 30px 0
+
+    .header-position
+      position: fixed
+      top: 30px
+      left: 0
+      bottom: 30px
+      width: $sidebar-width
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+    .logo
+      +hide-text
+      background:
+        repeat: no-repeat
+        position: center
+        size: contain
+      width: 130px
+      padding: 0
+      margin: 0 10px
+
+      &.show
+        background-image: url(/assets/img/logo-tomelliott.svg)
+
+    .site-nav
+      ul
+        list-style: none
+        margin: 20px 10px 300px 0
+        padding: 10px 20px 10px 0
+        text-align: right
+        border-right: solid 2px black
+
+      li
+        margin-bottom: 10px
+
+        &:last-child
+          margin-bottom: 0
+
+    .social-buttons
+      display: flex
+      justify-content: flex-end
+      margin-right: 20px
+
+      a
+        display: block
+        width: 30px
+        height: 30px
+        margin: 0
+        +hide-text
+        background:
+          repeat: no-repeat
+          position: center
+          size: contain
+
+        &.twitter
+          background-image: url(/assets/img/logo-twitter.svg)
+        &.github
+          background-image: url(/assets/img/logo-github.svg)
+
+    .mobile-nav-toggle
+      width: 40px
+      height: 40px
+      margin-right: 20px
+      display: none
+      align-items: center
+      cursor: pointer
+
+      span,
+      span:before,
+      span:after
+        content: ""
+        display: block
+        height: 3px
+        width: 100%
+        background: #333
+        position: relative
+
+        transition: all 0.3s ease-in-out
+
+      span:before
+        top: 10px
+
+      span:after
+        top: -12px
+
+      &.is-open span
+        background: transparent
+
+      &.is-open span:before,
+      &.is-open span:after
+        transform-origin: center
+        transform: rotate(45deg)
+        top: -2px
+
+      &.is-open span:before
+        transform: rotate(-45deg)
+        top: 2px
+
+  .mobile-nav
+    display: none
+    position: absolute
+    width: 100%
+    padding: 70px 0 20px
+    background: white
+    transform: translateY(-100%)
+
+    transition: all 0.3s ease-in-out
+
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+
+    li
+      text-align: center
+      margin-bottom: 20px
+      font-size: 1.2em
+
+
+@media (max-width: $responsive-width)
+  .home-wrap
+    header
+      width: auto
+      padding: 0
+      background: white
+
+      .header-position
+        position: relative
+        top: auto
+        bottom: auto
+        left: auto
+        width: auto
+        flex-direction: row
+        align-items: center
+        height: 70px
+
+      .logo
+        background-image: url(/assets/img/logo-tomelliott.svg)
+        margin-left: 20px
+
+      .site-nav,
+      .social-buttons
+        display: none
+
+      .mobile-nav-toggle
+        display: flex
+
+  .mobile-nav.is-open
+    display: block
+    transform: translateY(0%)
