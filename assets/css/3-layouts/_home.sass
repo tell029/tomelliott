@@ -4,3 +4,27 @@
 
   @media (max-width: $responsive-width)
     display: block
+
+  .home-sections
+    flex: 1
+
+    section
+      padding-left: $sidebar-width
+
+// columns
+.row
+  max-width: 650px
+  margin: 0 auto
+  padding: 0 5px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+  @media (max-width: 650px)
+    flex-direction: column
+
+  .col-1
+    margin: 5px
+
+  .col-2
+    margin: 5px
