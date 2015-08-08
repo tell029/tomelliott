@@ -1,5 +1,6 @@
 .home-wrap
   display: flex
+  height: 100vh
   min-height: 100vh
 
   @media (max-width: $responsive-width)
@@ -11,6 +12,9 @@
     section
       padding-left: $sidebar-width
 
+      @media (max-width: $responsive-width)
+        padding-left: 0
+
 // columns
 .row
   max-width: 650px
@@ -21,7 +25,7 @@
   justify-content: space-between
 
   @media (max-width: 650px)
-    flex-direction: column
+    display: block
 
   .col-1
     margin: 5px

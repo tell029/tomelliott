@@ -531,9 +531,7 @@ body {
       height: 3px;
       width: 100%;
       background: #333;
-      position: relative;
-      -webkit-transition: all 0.3s ease-in-out;
-              transition: all 0.3s ease-in-out; }
+      position: relative; }
     .home-wrap header .mobile-nav-toggle span:before {
       top: 10px; }
     .home-wrap header .mobile-nav-toggle span:after {
@@ -559,13 +557,11 @@ body {
   display: none;
   position: absolute;
   width: 100%;
-  padding: 70px 0 20px;
+  padding: 40px 0 20px;
   background: white;
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out; }
+          transform: translateY(-100%); }
   .home-wrap .mobile-nav ul {
     list-style: none;
     margin: 0;
@@ -578,13 +574,13 @@ body {
 @media (max-width: 800px) {
   .home-wrap header {
     width: auto;
-    padding: 0;
-    background: white; }
+    padding: 0; }
     .home-wrap header .header-position {
-      position: relative;
-      top: auto;
+      position: fixed;
+      top: 0;
       bottom: auto;
-      left: auto;
+      left: 0;
+      right: 0;
       width: auto;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -595,10 +591,12 @@ body {
       -webkit-align-items: center;
           -ms-flex-align: center;
               align-items: center;
-      height: 70px; }
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2); }
     .home-wrap header .logo {
-      background-image: url(/assets/img/logo-tomelliott.svg);
       margin-left: 20px; }
+      .home-wrap header .logo.show {
+        background-image: url(/assets/img/logo-tomelliott.svg); }
     .home-wrap header .site-nav,
     .home-wrap header .social-buttons {
       display: none; }
@@ -615,6 +613,7 @@ body {
 
 .about {
   height: 100vh;
+  min-height: 100vh;
   background-image: url(/assets/img/bg-about.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -676,7 +675,8 @@ body {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
           -ms-flex: 1;
-              flex: 1; }
+              flex: 1;
+      padding-bottom: 20px; }
     .about .col-2 .image-space {
       display: block;
       padding: 30px 40px 0 50px; }
@@ -689,11 +689,35 @@ body {
         background-size: cover;
         border-radius: 75px; }
 
+@media (max-width: 800px) {
+  .about .row.title {
+    width: 90%;
+    padding-top: 100px; } }
+
+@media (max-width: 650px) {
+  .about .fill-space .col-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .about .fill-space .col-2 .image-space {
+      padding: 0 0 30px; } }
+
 .home-wrap {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
   min-height: 100vh; }
   @media (max-width: 800px) {
     .home-wrap {
@@ -705,6 +729,9 @@ body {
             flex: 1; }
     .home-wrap .home-sections section {
       padding-left: 150px; }
+      @media (max-width: 800px) {
+        .home-wrap .home-sections section {
+          padding-left: 0; } }
 
 .row {
   max-width: 650px;
@@ -725,11 +752,7 @@ body {
           justify-content: space-between; }
   @media (max-width: 650px) {
     .row {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
+      display: block; } }
   .row .col-1 {
     margin: 5px; }
   .row .col-2 {

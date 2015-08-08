@@ -85,7 +85,7 @@
         background: #333
         position: relative
 
-        transition: all 0.3s ease-in-out
+        //transition: all 0.3s ease-in-out
 
       span:before
         top: 10px
@@ -110,11 +110,9 @@
     display: none
     position: absolute
     width: 100%
-    padding: 70px 0 20px
+    padding: 40px 0 20px
     background: white
     transform: translateY(-100%)
-
-    transition: all 0.3s ease-in-out
 
     ul
       list-style: none
@@ -132,20 +130,22 @@
     header
       width: auto
       padding: 0
-      background: white
 
       .header-position
-        position: relative
-        top: auto
+        position: fixed
+        top: 0
         bottom: auto
-        left: auto
+        left: 0
+        right: 0
         width: auto
         flex-direction: row
         align-items: center
-        height: 70px
+        height: 20px
+        background: rgba(255, 255, 255, 0.2)
 
       .logo
-        background-image: url(/assets/img/logo-tomelliott.svg)
+        &.show
+          background-image: url(/assets/img/logo-tomelliott.svg)
         margin-left: 20px
 
       .site-nav,
