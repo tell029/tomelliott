@@ -15,4 +15,21 @@ $(document).ready(function() {
       $("#headerTitle").removeClass("show");
     }
   });
+
+  // Clicking the arrows:
+  var switchArrows = function() {
+    if ($("#about .next-arrow").hasClass("hidden")) {
+      $("#about .next-arrow").removeClass("hidden");
+      $("#about .prev-arrow").addClass("hidden");
+      $("#about").removeClass("secondary");
+    } else {
+      $("#about .next-arrow").addClass("hidden");
+      $("#about .prev-arrow").removeClass("hidden");
+      $("#about").addClass("secondary");
+    };
+  };
+
+  $("#about .next-arrow").click(function() { switchArrows(); });
+  $("#about .prev-arrow").click(function() { switchArrows(); });
+  $("#about .read-more").click(function() {switchArrows(); });
 });

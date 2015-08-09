@@ -2,6 +2,8 @@
   header
     width: 0
     padding: 30px 0
+    position: relative
+    z-index: 100
 
     .header-position
       position: fixed
@@ -114,8 +116,9 @@
     position: absolute
     width: 100%
     margin: 60px 0
-    background: black
+    background: $top-bar-color
     transform: translateY(-100%)
+    z-index: 100
 
     ul
       list-style: none
@@ -127,6 +130,9 @@
       margin-bottom: 20px
       font-size: 1.3em
 
+      a
+        color: white
+
 
 @media (max-width: $responsive-width)
   .home-wrap
@@ -136,7 +142,7 @@
 
       .header-position
         position: absolute
-        padding :0
+        padding: 0
         top: 0
         bottom: auto
         left: 0
@@ -145,7 +151,7 @@
         flex-direction: row
         align-items: center
         height: 60px
-        background: black
+        background: $top-bar-color
 
       .logo
         &.show

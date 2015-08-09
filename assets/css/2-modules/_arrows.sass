@@ -1,0 +1,37 @@
+.arrow
+  position: absolute
+  display: block
+  width: 30px
+  margin: 0
+  padding: 0
+  top: 0
+  bottom: 0
+  opacity: 0.2
+  background:
+    repeat: no-repeat
+    position: center
+    size: contain
+  cursor: pointer
+  transition: all 0.3s ease-in-out 0.3s
+
+  &:hover
+    opacity: 0.4
+
+  &.hidden
+    opacity: 0
+    transition-delay: 0s
+
+  @media (max-width: 910px)// and (min-width: 801px)
+    display: none
+
+.next-arrow
+  @extend .arrow
+  right: 20px
+  background:
+    image: url(/assets/img/next-arrow.svg)
+
+.prev-arrow
+  @extend .next-arrow
+  right: auto
+  left: $sidebar-width + 20px
+  transform: scaleX(-1)

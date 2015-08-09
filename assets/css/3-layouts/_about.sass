@@ -1,6 +1,7 @@
 .about
   //height: 100vh
   min-height: 100vh
+  position: relative
 
   background:
     image: url(/assets/img/bg-about.png)
@@ -33,7 +34,11 @@
   .fill-space
     display: flex
     align-items: center
-    //height: 100%
+    transition: all 0.3s ease-in-out
+
+  .secondary
+    position: absolute
+    top: 0
 
   .col-2
     display: flex
@@ -61,6 +66,11 @@
           position: center
           size: cover
         border-radius: 75px
+
+  &.secondary
+    .fill-space
+      transform: translateX(-200%)
+
 
 @media (max-width: $responsive-width)
   .about
