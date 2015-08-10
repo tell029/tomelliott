@@ -16,20 +16,48 @@ $(document).ready(function() {
     }
   });
 
-  // Clicking the arrows:
+  // // Clicking the arrows:
+  // var windowResizeAbout = function() {
+  //   var aboutSecondaryBottom = $("#about .secondary").offset().top + $("#about .secondary").height();
+  //   var aboutSectionHeight = $("#about").height();
+  //
+  //   if (aboutSecondaryBottom >= aboutSectionHeight-20) {
+  //     $("#about .fill-space").addClass("small-window");
+  //   } else {
+  //     $("#about .fill-space").removeClass("small-window");
+  //   }
+  // };
+  // $(window).load(function() { windowResizeAbout(); });
+  // $(window).resize(function() {
+  //   windowResizeAbout();
+  // });
+
   var switchArrows = function() {
     if ($("#about .next-arrow").hasClass("hidden")) {
-      $("#about .next-arrow").removeClass("hidden");
-      $("#about .prev-arrow").addClass("hidden");
+      // hiding the 'extra' text
+      $("#about .next-arrow").removeClass("hidden").addClass("visible");
+      $("#about .prev-arrow").addClass("hidden").removeClass("visible");
       $("#about").removeClass("secondary");
     } else {
-      $("#about .next-arrow").addClass("hidden");
-      $("#about .prev-arrow").removeClass("hidden");
+      // showing the 'extra' text
+      $("#about .next-arrow").addClass("hidden").removeClass("visible");
+      $("#about .prev-arrow").removeClass("hidden").addClass("visible");
       $("#about").addClass("secondary");
+
+      // scroll window UP if needed:
+      var extraTop = $("#close-about-secondary").offset().top;
+      if ($(window).scrollTop() - extraTop >= 0) {
+        $("html, body").delay(200).animate({scrollTop: extraTop}, '300');
+      };
     };
   };
 
-  $("#about .next-arrow").click(function() { switchArrows(); });
-  $("#about .prev-arrow").click(function() { switchArrows(); });
+  $("#about .next-arrow").click(function() {
+    if ($(this).hasClass("visible")) { switchArrows(); };
+  });
+  $("#about .prev-arrow").click(function() {
+    if ($(this).hasClass("visible")) { switchArrows(); };
+  });
   $("#about .read-more").click(function() {switchArrows(); });
+  $("#close-about-secondary").click(function() {switchArrows(); });
 });

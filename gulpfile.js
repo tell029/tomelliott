@@ -43,7 +43,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
             baseDir: '_site'
         },
         notify: false,
-        host: "192.168.0.7"
+        host: "192.168.0.14"
     });
 });
 

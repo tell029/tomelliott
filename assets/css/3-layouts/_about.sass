@@ -11,14 +11,14 @@
   display: flex
   flex-direction: column
   align-items: stretch
-  justify-content: space-around
+  justify-content: center
 
   .title
     flex-shrink: 0
     height: 115px
     width: 100%
     display: block
-    padding: 30px 0
+    padding: 80px 0 30px
 
     h1
       margin: 0
@@ -33,12 +33,28 @@
 
   .fill-space
     display: flex
+    flex-grow: 1
     align-items: center
-    transition: all 0.3s ease-in-out
+    transition: all 0.6s ease-in-out
+    position: relative
 
   .secondary
     position: absolute
     top: 0
+    left: 0
+    right: 0
+    bottom: auto
+    background: rgba(0, 0, 0, 0.6)
+    color: #eee
+    padding: 10px
+    margin-left: 10px
+    margin-right: 10px
+    flex-direction: column
+    transform: translateX(5000px)
+    border-radius: 15px
+
+    p:last-child
+      margin-bottom: 0
 
   .col-2
     display: flex
@@ -69,7 +85,25 @@
 
   &.secondary
     .fill-space
-      transform: translateX(-200%)
+      transform: translateX(-5000px)
+
+      &.small-window
+        transform: translateX(0)
+
+        .secondary
+          display: block
+
+  // when the window gets too short to display additional information nicely
+  .fill-space.small-window
+    position: static
+    display: block
+
+    .secondary
+      position: static
+      transform: translateX(0)
+      display: none
+
+
 
 
 @media (max-width: $responsive-width)
@@ -80,8 +114,10 @@
 
 @media (max-width: 650px)
   .about
-    .fill-space
+    .title
+      padding-top: 10px
 
+    .fill-space
       .col-2
         flex-direction: column
         align-items: center
