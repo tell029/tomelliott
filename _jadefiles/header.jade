@@ -1,22 +1,20 @@
-mixin nav-content()
-  ul
-    li: a(href="#about") About
-    li: a(href="#research") Research
-    li: a(href="#projects") Projects
-    li: a(href="#contact") Contact
+section.header
+  .row
+    .column
+      h1 Tom Elliott
+      
+      p Statistics PhD. Student & Part-time Statistical Software Deveoper @ The University of Auckland
 
-.mobile-nav
-  +nav-content()
-
-header
-  .header-position
-    h1.logo#headerTitle Tom Elliott
-
-    nav.site-nav
-      +nav-content()
-
-    .social-buttons
-      a(href="http://twitter.com/tomelliott90" target="_blank").twitter Twitter
-      a(href="http://github.com/tell029" target="_blank").github GitHub
-
-    .mobile-nav-toggle: span
+.contain-to-grid.sticky.site-navigation
+  nav(data-topbar data-options="sticky_on: [large,medium]" role="navigation").top-bar
+    ul.title-area
+      li.name
+      li.toggle-topbar.menu-icon
+        a(href="#"): span
+    section.top-bar-section
+      ul
+        li: a(href="#about") About
+        li: a(href="#research") Research
+        li: a(href="#projects") Projects
+        li: a(href="#contact") Contact
+        
