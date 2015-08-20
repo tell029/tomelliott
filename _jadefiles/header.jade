@@ -1,20 +1,21 @@
-section.header
-  .row
-    .column
-      h1 Tom Elliott
-      
-      p Statistics PhD. Student & Part-time Statistical Software Deveoper @ The University of Auckland
-
-.contain-to-grid.sticky.site-navigation
+// NAVIGATION BAR
+.contain-to-grid
   nav(data-topbar data-options="sticky_on: [large,medium]" role="navigation").top-bar
     ul.title-area
       li.name
       li.toggle-topbar.menu-icon
         a(href="#"): span
     section.top-bar-section
-      ul
-        li: a(href="#about") About
-        li: a(href="#research") Research
-        li: a(href="#projects") Projects
-        li: a(href="#contact") Contact
+      ul.right#site-navigation
+        li: a(href="" data-section="about") About
+        li: a(href="" data-section="research") Research
+        li: a(href="" data-section="projects") Projects
+        li: a(href="" data-section="contact") Contact
         
+// HERO HEADER
+section.header
+  .row
+    .column
+      h1 Tom Elliott
+      
+      p Statistics PhD. Student & Part-time Statistical Software Deveoper @ The University of Auckland

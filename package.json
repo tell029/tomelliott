@@ -23,7 +23,8 @@
     "jekyll",
     "gulp",
     "sass",
-    "browsersync"
+    "browsersync",
+    "foundation"
   ],
   "bugs": {
     "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"

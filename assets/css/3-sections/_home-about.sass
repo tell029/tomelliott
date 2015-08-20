@@ -1,0 +1,19 @@
+#about
+  padding: 20px 0
+
+  .face-image
+    background:
+      image: url(../img/about-face.gif)
+      size: cover
+    border-radius: 50%
+    width: 80%
+    margin: 0 auto
+
+    @media screen and (max-width: $small-breakpoint)
+      width: 50%
+
+
+    &:before
+      content: ''
+      padding-top: 100%
+      display: block
