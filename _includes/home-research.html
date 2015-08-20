@@ -20,13 +20,22 @@
     </div>
     <div class="small-12 medium-8 large-7 columns research-info">
       <div class="content active default">
-        <p>While studying at the University of Auckland, I have undertaken several research projects. These are outlined here.</p>
+        <p>While studying at the University of Auckland, I have undertaken several research projects. My primary research interests are:
+          <ul>
+            <li>Bayesian modelling</li>
+            <li>Computational statistics</li>
+            <li>Graphics and visualisation</li>
+          </ul>
+        </p>
+        <p>I work predominantly with <a href="http://cran.stat.auckland.ac.nz/" target="_blank">R</a>, and have produced several packages (most under the banner of <a href="https://www.stat.auckland.ac.nz/~wild/iNZight" target="_blank">iNZight</a> and also began development of the package <a href="http://github.com/tmelliott/BSM" target="_blank">BSM</a> during my Masters project.</p>
+        <p class="show-for-small-only">Click the images above for information about specific research projects I have done.</p>
+        <p class="hide-for-small-only">Click the images to the left for information about specific research projects I have done.</p>
       </div>{% for topic_hash in site.data.research %}
       {% assign topic = topic_hash[1] %}
       <div class="content {{ topic.name }}">
         <h5>{{ topic.title }}</h5>
-        <h6 class="subheader">Abstract</h6>
-        <p>{{ topic.abstract }}</p>
+        <h6 class="subheader">{{ topic.type }}</h6>
+        <p class="smaller">{{ topic.text }}</p>
       </div>{% endfor %}
     </div>
   </div>

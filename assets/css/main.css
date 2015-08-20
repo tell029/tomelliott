@@ -6742,5 +6742,5 @@ h2 .accent {
       -webkit-transform: translateX(200%);
           -ms-transform: translateX(200%);
               transform: translateX(200%); }
-  #research .research-info p {
+  #research .research-info p.smaller {
     font-size: 0.9em; }
