@@ -1,6 +1,30 @@
-.row#research
-  .small-12.columns
-    h2
-      pre echo #[span.accent $research];
+#research
+  .row
+    .small-12.columns
+      h2
+        pre echo #[span.accent $research];
+
+  .row
+    .small-12.medium-4.large-5.columns.research-topics
+      {% for topic_hash in site.data.research %}
+      {% assign topic = topic_hash[1] %}
+      .topic(class="{{ topic.name }}" style="background-image:url(assets/img/projects/{{topic.image}})")
+        .topic-meta(data-project-name="{{ topic.name }}")
+          p {{ topic.project }}, #[em {{ topic.date }}]
+          
+          p.show-for-touch (touch to view)
+      {% endfor %}
+      
+    .small-12.medium-8.large-7.columns.research-info
+      .content.active.default
+        p While studying at the University of Auckland, I have undertaken several research projects. These are outlined here.
+      
+      {% for topic_hash in site.data.research %}
+      {% assign topic = topic_hash[1] %}
+      .content(class="{{ topic.name }}")
+        h5 {{ topic.title }}
+        h6.subheader Abstract
+        p {{ topic.abstract }}
+      {% endfor %}
 
 .row: hr

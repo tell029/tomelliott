@@ -1,9 +1,34 @@
 
-<div id="research" class="row">
-  <div class="small-12 columns">
-    <h2>
-      <pre>echo <span class="accent">$research</span>;</pre>
-    </h2>
+<div id="research">
+  <div class="row">
+    <div class="small-12 columns">
+      <h2>
+        <pre>echo <span class="accent">$research</span>;</pre>
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 medium-4 large-5 columns research-topics">
+      {% for topic_hash in site.data.research %}
+      {% assign topic = topic_hash[1] %}
+      <div style="background-image:url(assets/img/projects/{{topic.image}})" class="topic {{ topic.name }}">
+        <div data-project-name="{{ topic.name }}" class="topic-meta">
+          <p>{{ topic.project }}, <em>{{ topic.date }}</em></p>
+          <p class="show-for-touch">(touch to view)</p>
+        </div>
+      </div>{% endfor %}
+    </div>
+    <div class="small-12 medium-8 large-7 columns research-info">
+      <div class="content active default">
+        <p>While studying at the University of Auckland, I have undertaken several research projects. These are outlined here.</p>
+      </div>{% for topic_hash in site.data.research %}
+      {% assign topic = topic_hash[1] %}
+      <div class="content {{ topic.name }}">
+        <h5>{{ topic.title }}</h5>
+        <h6 class="subheader">Abstract</h6>
+        <p>{{ topic.abstract }}</p>
+      </div>{% endfor %}
+    </div>
   </div>
 </div>
 <div class="row">

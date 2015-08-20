@@ -1,0 +1,71 @@
+#research
+  .research-topics
+    margin: 10px auto 20px
+
+    .topic
+      height: 100px
+      background:
+        size: cover
+      position: relative
+      cursor: pointer
+      overflow: hidden
+
+      @media screen and (max-width: $small-breakpoint)
+        height: 60px
+
+      .topic-meta
+        position: absolute
+        background: fade-out(#333, 0.2)
+        opacity: 0
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        transition: all 200ms ease-in-out
+        transform: translateY(100%)
+        padding: 5px
+
+        p
+          color: white
+          font:
+            weight: bold
+          margin: 0
+
+          &.show-for-touch
+            font:
+              size: 0.8em
+              weight: normal
+
+
+      &:hover .topic-meta,
+      &.active .topic-meta
+        transform: translateY(0)
+        opacity: 0.8
+
+    em
+      font-size: 0.8em
+
+  .research-info
+    position: relative
+    height: 400px
+
+    .content
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      padding: 10px 15px
+      opacity: 0
+      transform: translateY(100%)
+      transition: all 400ms cubic-bezier(0.190, 1.000, 0.350, 1.335)
+
+      &.active
+        opacity: 1
+        transform: translateY(0)
+
+      &.blast-off
+        opacity: 0
+        transform: translateX(200%)
+
+    p
+      font-size: 0.9em
