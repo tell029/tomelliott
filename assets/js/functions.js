@@ -2,6 +2,7 @@ $(document).foundation();
 
 $(document).ready(function(){
   navigationScrolling();
+  yearsSince();
 });
 
 
@@ -15,4 +16,10 @@ navigationScrolling = function() {
     }, 500);
     return false;
   });
+}
+
+yearsSince = function() {
+  var year = (new Date).getFullYear();
+  var since = year - 2010;
+  $(".yearsSinceStarting").html(since);
 }

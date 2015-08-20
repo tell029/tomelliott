@@ -7,15 +7,14 @@
         a(href="#"): span
     section.top-bar-section
       ul.right#site-navigation
-        li: a(href="" data-section="about") About
-        li: a(href="" data-section="research") Research
-        li: a(href="" data-section="projects") Projects
-        li: a(href="" data-section="contact") Contact
+        {% for nav in site.data.home.navigation %}
+        li: a(href="" data-section="{{ nav.section }}") {{ nav.name }}
+        {% endfor %}
         
 // HERO HEADER
 section.header
   .row
     .column
-      h1 Tom Elliott
+      h1 {{ page.title }}
       
-      p Statistics PhD. Student & Part-time Statistical Software Deveoper @ The University of Auckland
+      p {{ page.header_blurb }}
