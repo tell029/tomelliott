@@ -1,25 +1,22 @@
 .row#about
-  .small-12.medium-8.columns
+  .small-12.columns
     h2
       pre echo #[span.accent $about_me];
 
-    p My name is Tom, but you can call me &ldquo;Tom&rdquo;! I am a PhD Student at The University of Auckland, but you already knew that (because it says so above &hellip;). I have been studying at UoA since 2010 (that's like, #[a(href="#" data-reveal-id="questionMySanity")#[code expr $(date +%Y) - 2010]] years ago!!), although I did my undergraduate BSc in Biological Sciences &mdash; for what reason, I'm not too sure. Fortunately, I discovered statistics was far more interesting, converted to a double major, and have now done an Honours and Masters degree in Statistics.
+    pre Error: content not found!
 
-    #questionMySanity.reveal-modal(data-reveal aria-labelledby="questionMySanity" aria-hidden="true" role="dialog")
-      p For those of you who have no idea what that means &hellip;
+    p I'm still developing something that is somewhat presentable &mdash; until then, you'll have to be patient &hellip;
 
-      pre $ expr(date +%Y) - 2010
-      pre.yearsSinceStarting
-
-      p &hellip; which means I started at UoA #[span.yearsSinceStarting] years ago.
-
-      a(class="close-reveal-modal" aria-label="Close") &#215
-
-
-    p I have also been (quite heavily) involved in the iNZightVIT project since the middle of 2012. At first, I implemented functionality for #[span(data-tooltip aria-haspopup="true" class="has-tip" title="Generalised Linear Models") GLMs] and Survey GLMS's in the model fitting module, but since then I have completely rewritten (twice) the plotting package #[code iNZightPlots], and made a significant contribution to just about everything else contained within iNZightVIT (for which I apologise).
-
-  .small-12.medium-4.columns
-    .face-image
+    pre return false;
 
 .row
   hr
+
+.row
+  .small-12.columns.small-centered
+    h3: a(href="mailto:tom.elliott@auckland.ac.nz") tom.elliott@auckland.ac.nz
+
+.row.social-icons
+  .small-6.small-centered.columns
+    a(href="http://twitter.com/tomelliott90" target="_blank").twitter-icon
+    a(href="http://github.com/tmelliott" target="_blank").github-icon

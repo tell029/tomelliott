@@ -6676,6 +6676,23 @@ h2 .accent {
       padding-top: 100%;
       display: block; }
 
+h3 {
+  margin: 10px auto 20px;
+  text-align: center; }
+
+.social-icons {
+  text-align: center; }
+  .social-icons .twitter-icon,
+  .social-icons .github-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px; }
+  .social-icons .twitter-icon {
+    background-image: url(../img/logo-twitter.svg); }
+  .social-icons .github-icon {
+    background-image: url(../img/logo-github.svg); }
+
 #research .research-topics {
   margin: 10px auto 20px; }
   #research .research-topics .topic {
