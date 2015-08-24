@@ -4,6 +4,8 @@ $(document).ready(function(){
   navigationScrolling();
   yearsSince();
 
+  scrollEffects();
+
   researchInfo();
 });
 
@@ -56,5 +58,20 @@ researchInfo = function() {
       current.removeClass("active").removeClass("blast-off");
       $(".research-info .content."+topic).addClass("active");
     }, 300);
+  });
+}
+
+scrollEffects = function() {
+  var aboutTop = $("#about").offset().top;
+  $(window).scroll(function() {
+    var winPos = $(window).scrollTop();
+    var winHt = $(window).height();
+
+    // About section - face image jumps up
+    console.log(winPos);
+    console.log(aboutTop - winHt / 2);
+    if (winPos > (aboutTop - (winHt / 2))) {
+      $("#about .face-image").removeClass("from-below");
+    }
   });
 }
