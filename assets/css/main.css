@@ -6,6 +6,7 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Cousine);
+@import url(https://fonts.googleapis.com/css?family=Gruppo);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -6648,15 +6649,11 @@ h2 .accent {
   text-align: center;
   margin-bottom: 20px; }
   .header h1 {
-    overflow: hidden;
-    text-indent: 101%;
-    white-space: nowrap;
-    height: 6rem;
-    background-image: url(../img/text-tomelliott.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 3rem 0; }
+    line-height: 6rem;
+    margin: 3rem 0;
+    font-family: 'Gruppo', cursive;
+    font-size: 4rem;
+    color: white; }
   .header p {
     color: white; }
 
