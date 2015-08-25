@@ -9,7 +9,8 @@
 
   h1
     //+hide-text
-    height: 6rem
+    height: 5rem
+    width: 100%
     //background:
       image: url(../img/text-tomelliott.svg)
       position: center
@@ -17,12 +18,14 @@
       size: contain
     margin: 3rem 0
     font:
-      family: 'Gruppo', cursive
-      size: 4rem
+      family: $header-font-family, serif
+      //size: 4rem
     color: white
+    line-height: 1
 
-    @media (max-width: $small-breakpoint)
+    //@media (max-width: $small-breakpoint)
       font-size: 3rem
 
   p
     color: white
+    font-family: $blurb-font-family

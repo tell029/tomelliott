@@ -6,7 +6,7 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Cousine);
-@import url(https://fonts.googleapis.com/css?family=Gruppo);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -6624,7 +6624,7 @@ body {
   color: #0078A0; }
 
 pre {
-  font-family: 'Cousine' mono; }
+  font-family: "Cousine", mono; }
 
 .math {
   font-family: Georgia, "Times New Roman", Times, serif; }
@@ -6646,11 +6646,13 @@ hr {
   background-image: linear-gradient(to right, rgba(0, 120, 160, 0), rgba(0, 120, 160, 0.75), rgba(0, 120, 160, 0));
   opacity: 0.8; }
 
-h2 pre {
-  font-size: 0.5em; }
-
-h2 .accent {
-  font-size: 2em; }
+h2 {
+  font-family: "Pacifico";
+  color: #0078A0; }
+  h2 pre {
+    font-size: 0.5em; }
+  h2 .accent {
+    font-size: 2em; }
 
 .header {
   background-image: url(../img/bg-about.png);
@@ -6659,16 +6661,15 @@ h2 .accent {
   text-align: center;
   margin-bottom: 20px; }
   .header h1 {
-    height: 6rem;
+    height: 5rem;
+    width: 100%;
     margin: 3rem 0;
-    font-family: 'Gruppo', cursive;
-    font-size: 4rem;
-    color: white; }
-    @media (max-width: 40em) {
-      .header h1 {
-        font-size: 3rem; } }
+    font-family: "Pacifico", serif;
+    color: white;
+    line-height: 1; }
   .header p {
-    color: white; }
+    color: white;
+    font-family: "Lato"; }
 
 #about {
   padding: 20px 0; }

@@ -1,7 +1,7 @@
+include ../_jademixins/mixins
 .row#about
   .small-12.medium-8.columns
-    h2
-      pre echo #[span.accent $about_me];
+    +sectiontitle('About Me')
 
     p My name is Tom, but you can call me &ldquo;Tom&rdquo;! I am a PhD Student at The University of Auckland, but you already knew that (because it says so above &hellip;). I have been studying at UoA since 2010 (that's like, #[a(href="#" data-reveal-id="questionMySanity")#[code expr $(date +%Y) - 2010]] years ago!!), although I did my undergraduate BSc in Biological Sciences &mdash; for what reason, I'm not too sure. Fortunately, I discovered statistics was far more interesting, converted to a double major, and have now done an Honours and Masters degree in Statistics.
 

@@ -1,13 +1,24 @@
 $(document).foundation();
 
 $(document).ready(function(){
+  headerFill();
+
   navigationScrolling();
+
   yearsSince();
 
   scrollEffects();
 
   researchInfo();
+
+  resizeEvents();
 });
+
+headerFill = function() {
+  $("#headerTitleFill").textfill({
+    maxFontPixels: 100
+  });
+}
 
 
 navigationScrolling = function() {
@@ -62,16 +73,20 @@ researchInfo = function() {
 }
 
 scrollEffects = function() {
-  var aboutTop = $("#about").offset().top;
+  var aboutTop = $("#about .face-image").offset().top;
   $(window).scroll(function() {
     var winPos = $(window).scrollTop();
     var winHt = $(window).height();
 
     // About section - face image jumps up
-    console.log(winPos);
-    console.log(aboutTop - winHt / 2);
-    if (winPos > (aboutTop - (winHt / 2))) {
+    if (winPos > (aboutTop - (winHt))) {
       $("#about .face-image").removeClass("from-below");
     }
+  });
+}
+
+resizeEvents = function() {
+  $(window).resize(function(){
+    headerFill();
   });
 }
