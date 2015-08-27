@@ -6,7 +6,7 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Cousine);
-@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Oregano);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -6634,10 +6634,13 @@ pre {
           transition: all 200ms cubic-bezier(0.42, 0, 0.47, 1.46); }
 
 .from-below {
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transform: translateY(100%) scale(0.5);
+      -ms-transform: translateY(100%) scale(0.5);
+          transform: translateY(100%) scale(0.5); }
+
+.no-line-break {
+  display: inline-block; }
 
 hr {
   border: 0;
@@ -6647,7 +6650,7 @@ hr {
   opacity: 0.8; }
 
 h2 {
-  font-family: "Pacifico";
+  font-family: "Oregano";
   color: #0078A0; }
   h2 pre {
     font-size: 0.5em; }
@@ -6661,12 +6664,18 @@ h2 {
   text-align: center;
   margin-bottom: 20px; }
   .header h1 {
-    height: 5rem;
     width: 100%;
     margin: 3rem 0;
-    font-family: "Pacifico", serif;
+    font-family: "Oregano", serif;
+    font-size: 5rem;
     color: white;
     line-height: 1; }
+    @media (max-width: 40em) {
+      .header h1 {
+        font-size: 4.5rem; } }
+    @media (max-width: 290px) {
+      .header h1 {
+        font-size: 3rem; } }
   .header p {
     color: white;
     font-family: "Lato"; }
@@ -6687,71 +6696,83 @@ h2 {
       padding-top: 100%;
       display: block; }
 
-#research .research-topics {
-  margin: 10px auto 20px; }
-  #research .research-topics .topic {
-    height: 100px;
-    background-size: cover;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden; }
-    @media screen and (max-width: 40em) {
-      #research .research-topics .topic {
-        height: 60px; } }
-    #research .research-topics .topic .topic-meta {
-      position: absolute;
-      background: rgba(51, 51, 51, 0.8);
-      opacity: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
+#research {
+  position: relative;
+  overflow: hidden; }
+  #research .research-topics {
+    margin: 10px auto 20px; }
+    #research .research-topics .topic {
+      height: 100px;
+      background-size: cover;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      margin: 10px 0;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+      -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+              transform: scale(0.9);
       -webkit-transition: all 200ms ease-in-out;
-              transition: all 200ms ease-in-out;
+              transition: all 200ms ease-in-out; }
+      @media screen and (max-width: 40em) {
+        #research .research-topics .topic {
+          height: 60px; } }
+      #research .research-topics .topic .topic-meta {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        -webkit-transition: all 200ms ease-in-out;
+                transition: all 200ms ease-in-out; }
+        #research .research-topics .topic .topic-meta p {
+          background: rgba(0, 120, 160, 0.6);
+          color: white;
+          font-weight: bold;
+          font-size: 12px;
+          margin: 10px 0 0;
+          padding: 5px;
+          line-height: 1; }
+          #research .research-topics .topic .topic-meta p.show-for-touch {
+            background: none;
+            font-size: 0.8em;
+            font-weight: normal; }
+      #research .research-topics .topic:hover, #research .research-topics .topic.active:hover {
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); }
+      #research .research-topics .topic.active {
+        -webkit-transform: scale(0.95);
+            -ms-transform: scale(0.95);
+                transform: scale(0.95);
+        box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3); }
+    #research .research-topics em {
+      font-size: 0.8em; }
+  #research .research-info {
+    position: relative;
+    height: 400px; }
+    #research .research-info .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 15px;
+      opacity: 0;
       -webkit-transform: translateY(100%);
           -ms-transform: translateY(100%);
               transform: translateY(100%);
-      padding: 5px; }
-      #research .research-topics .topic .topic-meta p {
-        color: white;
-        font-weight: bold;
-        margin: 0; }
-        #research .research-topics .topic .topic-meta p.show-for-touch {
-          font-size: 0.8em;
-          font-weight: normal; }
-    #research .research-topics .topic:hover .topic-meta,
-    #research .research-topics .topic.active .topic-meta {
-      -webkit-transform: translateY(0);
-          -ms-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 0.8; }
-  #research .research-topics em {
-    font-size: 0.8em; }
-
-#research .research-info {
-  position: relative;
-  height: 400px; }
-  #research .research-info .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 10px 15px;
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-        -ms-transform: translateY(100%);
-            transform: translateY(100%);
-    -webkit-transition: all 400ms cubic-bezier(0.19, 1, 0.35, 1.335);
-            transition: all 400ms cubic-bezier(0.19, 1, 0.35, 1.335); }
-    #research .research-info .content.active {
-      opacity: 1;
-      -webkit-transform: translateY(0);
-          -ms-transform: translateY(0);
-              transform: translateY(0); }
-    #research .research-info .content.blast-off {
-      opacity: 0;
-      -webkit-transform: translateX(200%);
-          -ms-transform: translateX(200%);
-              transform: translateX(200%); }
-  #research .research-info p.smaller {
-    font-size: 0.9em; }
+      -webkit-transition: all 400ms cubic-bezier(0.19, 1, 0.35, 1.335);
+              transition: all 400ms cubic-bezier(0.19, 1, 0.35, 1.335); }
+      #research .research-info .content.active {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0); }
+      #research .research-info .content.blast-off {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+                transform: translateY(-100%); }
+    #research .research-info p.smaller {
+      font-size: 0.9em; }

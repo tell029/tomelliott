@@ -9,7 +9,7 @@
 
   h1
     //+hide-text
-    height: 5rem
+    //height: 5rem
     width: 100%
     //background:
       image: url(../img/text-tomelliott.svg)
@@ -19,11 +19,14 @@
     margin: 3rem 0
     font:
       family: $header-font-family, serif
-      //size: 4rem
+      size: 5rem
     color: white
     line-height: 1
 
-    //@media (max-width: $small-breakpoint)
+    @media (max-width: $small-breakpoint)
+      font-size: 4.5rem
+
+    @media (max-width: 290px)
       font-size: 3rem
 
   p

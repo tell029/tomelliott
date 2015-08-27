@@ -10,7 +10,7 @@
     <div class="small-12 medium-4 large-5 columns research-topics">
       {% for topic_hash in site.data.research %}
       {% assign topic = topic_hash[1] %}
-      <div style="background-image:url(assets/img/projects/{{topic.image}})" class="topic {{ topic.name }}">
+      <div style="background-image:url(assets/img/projects/{{topic.image}})" class="topic start-hidden from-below {{ topic.name }}">
         <div data-project-name="{{ topic.name }}" class="topic-meta">
           <p>{{ topic.project }}, <em>{{ topic.date }}</em></p>
           <p class="show-for-touch">(touch to view)</p>

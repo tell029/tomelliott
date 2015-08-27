@@ -2,22 +2,17 @@ $(document).foundation();
 
 $(document).ready(function(){
   headerFill();
-
   navigationScrolling();
-
   yearsSince();
-
   scrollEffects();
-
   researchInfo();
-
   resizeEvents();
 });
 
 headerFill = function() {
-  $("#headerTitleFill").textfill({
-    maxFontPixels: 100
-  });
+  // $("#headerTitleFill").textfill({
+  //   maxFontPixels: 200
+  // });
 }
 
 
@@ -63,7 +58,7 @@ researchInfo = function() {
 
     $(".research-topics ."+topic).addClass("active");
     $(".research-topics .active .show-for-touch").html("(touch to hide)");
-    $(".research-topics .active").trigger('touchend');
+    $(".research-topics .active .topic-meta").blur();
 
     setTimeout(function() {
       current.removeClass("active").removeClass("blast-off");
@@ -73,20 +68,24 @@ researchInfo = function() {
 }
 
 scrollEffects = function() {
-  var aboutTop = $("#about .face-image").offset().top;
+  var researchTop = $("#research").offset().top;
   $(window).scroll(function() {
     var winPos = $(window).scrollTop();
     var winHt = $(window).height();
 
-    // About section - face image jumps up
-    if (winPos > (aboutTop - (winHt))) {
-      $("#about .face-image").removeClass("from-below");
+    // Research section - face image jumps up
+    if (winPos > (researchTop - (winHt / 2))) {
+      $("#research .research-topics .topic").each(function(i){
+        setTimeout(function(){
+          $("#research .research-topics .topic").eq(i).removeClass("from-below");
+        }, 400 * i);
+      });
     }
   });
 }
 
 resizeEvents = function() {
   $(window).resize(function(){
-    headerFill();
+
   });
 }
