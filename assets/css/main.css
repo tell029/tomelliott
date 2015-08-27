@@ -6,7 +6,7 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Cousine);
-@import url(https://fonts.googleapis.com/css?family=Oregano);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -6650,7 +6650,7 @@ hr {
   opacity: 0.8; }
 
 h2 {
-  font-family: "Oregano";
+  font-family: "Quicksand";
   color: #0078A0; }
   h2 pre {
     font-size: 0.5em; }
@@ -6658,7 +6658,7 @@ h2 {
     font-size: 2em; }
 
 .header {
-  background-image: url(../img/bg-about.png);
+  background-image: url(../img/auckland-city2.jpg);
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -6666,16 +6666,17 @@ h2 {
   .header h1 {
     width: 100%;
     margin: 3rem 0;
-    font-family: "Oregano", serif;
+    font-family: "Quicksand", serif;
     font-size: 5rem;
+    font-weight: 300;
     color: white;
     line-height: 1; }
     @media (max-width: 40em) {
       .header h1 {
-        font-size: 4.5rem; } }
+        font-size: 3.5rem; } }
     @media (max-width: 290px) {
       .header h1 {
-        font-size: 3rem; } }
+        font-size: 2.5rem; } }
   .header p {
     color: white;
     font-family: "Lato"; }
