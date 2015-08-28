@@ -6642,6 +6642,9 @@ pre {
 .no-line-break {
   display: inline-block; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Quicksand"; }
+
 hr {
   border: 0;
   height: 1px;
@@ -6777,3 +6780,43 @@ h2 {
                 transform: translateY(-100%); }
     #research .research-info p.smaller {
       font-size: 0.9em; }
+
+.publications .publication {
+  background: #eee;
+  display: block;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px 0; }
+  .publications .publication .journal {
+    font-style: italic; }
+
+.publications .see-all {
+  text-align: right; }
+
+#contact {
+  margin-bottom: 50px;
+  padding-top: 50px; }
+  #contact .email {
+    text-align: center; }
+    #contact .email a {
+      font-size: 2rem;
+      font-family: "Quicksand"; }
+      @media (max-width: 500px) {
+        #contact .email a {
+          font-size: 1.5rem; } }
+      @media (max-width: 370px) {
+        #contact .email a {
+          font-size: 1.2rem; } }
+  #contact .social-icons {
+    margin-top: 30px;
+    text-align: center; }
+    #contact .social-icons .twitter-icon,
+    #contact .social-icons .github-icon {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin: 0 10px; }
+    #contact .social-icons .twitter-icon {
+      background-image: url(../img/logo-twitter.svg); }
+    #contact .social-icons .github-icon {
+      background-image: url(../img/logo-github.svg); }
