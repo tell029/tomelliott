@@ -4,8 +4,8 @@
 - name: Research
   section: research
 
-- name: Work
-  section: Work
+- name: Projects
+  section: projects
 
 - name: Contact
   section: contact

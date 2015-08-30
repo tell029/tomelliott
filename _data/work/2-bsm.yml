@@ -1,0 +1,8 @@
+title: BSM
+image: assets/img/projects/masters.png
+url: https://www.stat.auckland.ac.nz/~wild/iNZight
+role: Creator and developer
+date: 2014&ndash;2015
+
+info:
+  - As part of my MSc Thesis work, I developed an R package to provide a simple method of fitting some fairly complicated Bayesian selectivity models.

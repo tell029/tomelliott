@@ -3,9 +3,15 @@
     image: url(../img/auckland-city2.jpg)
     size: cover
     position: center
+    repeat: no-repeat
 
   text-align: center
   margin-bottom: 20px
+  opacity: 1
+  transition: opacity 700ms ease-in-out
+
+  &.uninitialised
+    opacity: 0
 
   h1
     width: 100%

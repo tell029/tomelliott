@@ -17,14 +17,14 @@
           </ul>
         </p>
         <p>I work predominantly with <a href="http://cran.stat.auckland.ac.nz/">R</a>, and have produced several packages (most under the banner of <a href="https://www.stat.auckland.ac.nz/~wild/iNZight">iNZight</a>) and also began development of the package <a href="http://github.com/tmelliott/BSM">BSM</a> during my Masters project.</p>
-        <p class="show-for-small-only">Click the images above for information about specific research projects I have done.</p>
+        <p class="show-for-small-only">Click the images below for information about specific research projects I have done.</p>
         <p class="hide-for-small-only">Click the images to the left for information about specific research projects I have done.</p>
       </div>{% for topic_hash in site.data.research %}
       {% assign topic = topic_hash[1] %}
       <div class="content {{ topic.name }}">
         <h5>{{ topic.title }}</h5>
-        <h6 class="subheader">{{ topic.type }}</h6>
-        <p class="smaller">{{ topic.text }}</p>
+        <h6 class="subheader">{{ topic.type }}</h6>{% for para in topic.text %}
+        <p class="smaller">{{ para }}</p>{% endfor %}
       </div>{% endfor %}
     </div>
     <div class="small-12 medium-4 large-5 columns research-topics medium-pull-8 large-pull-7">
@@ -33,14 +33,14 @@
       <div style="background-image:url(assets/img/projects/{{topic.image}})" class="topic start-hidden from-below {{ topic.name }}">
         <div data-project-name="{{ topic.name }}" class="topic-meta">
           <p>{{ topic.project }}, <em>{{ topic.date }}</em></p>
-          <p class="show-for-touch">(touch to view)</p>
+          <!--p.show-for-touch (touch to view)-->
         </div>
       </div>{% endfor %}
     </div>
   </div>
 </div>
 <div class="row publications">
-  <div class="small-12 medium-8 medium-centered columns">
+  <div class="small-12 large-8 large-centered columns">
     <h5>Publications</h5>{% for pub in site.data.publications | limit:3 %}<a href="{{ pub.doi }}" class="publication"><span class="author">{{ pub.author }}</span><span class="year"> ({{ pub.year }})</span><span class="title"> {{ pub.title }}.</span><span class="journal"> {{ pub.journal }},</span><span class="pages"> {{ pub.pages }}.</span></a>{% endfor %}
   </div>
   <!-- Include the following once more than three exist ...-->
