@@ -10,12 +10,12 @@ include ../_jademixins/mixins
       ul.work-wheel
         {% for project in site.data.work %}
         {% assign proj = project[1] %}
-        
+
         li.work-item
-          img(src='{{ proj.image }}')      
-        
+          img(src='{{ proj.image }}')
+
         {% endfor %}
-    
+
   .work-content-wrap
     {% for project in site.data.work %}
     {% assign proj = project[1] %}
@@ -24,13 +24,13 @@ include ../_jademixins/mixins
         h4 {{ proj.title }}
         h5.subheader {{ proj.role }}
         p.smaller {{ proj.date }}
-        
+
       .small-12.medium-8.large-7.columns.work-description
         {% for para in proj.info %}
-        p.smaller {{ para }}  
+        p.smaller {{ para }}
         {% endfor %}
-        
-      
+
+
     {% endfor %}
-    
+
 .row: hr

@@ -2,8 +2,9 @@ name: phd
 project: Doctor of Philosophy
 date: 2015&ndash;current
 title: Better prediction of bus-time arrival
-image: honours.png
+image: phd-bg.png
 type: Thesis Proposal
+position: bottom right
 
 text:
   - Public transport prediction has received a lot of attention in the past, with several modelling techniques having been developed. However, many of these only account for information regarding a single bus or route. Further, anomalies caused by inadequate predictions (e.g., buses going "backwards in time" due to sudden increases in ETA) are encountered which understandably frustrate commuters.

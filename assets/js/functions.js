@@ -32,8 +32,8 @@ navigationScrolling = function() {
 
 researchInfo = function() {
   // resize to fit the content
-  var maxHeight = -1;
-  var isMobile = Foundation.utils.is_small_only();
+  var maxHeight = -1,
+      isMobile = Foundation.utils.is_small_only();
 
   if (isMobile) {
     $(".research-info").height($(".research-info .content.active").height());
@@ -46,8 +46,9 @@ researchInfo = function() {
   }
 
   $(".research-topics .topic-meta").on("click", function() {
-    var current = $(".research-info .content.active");
-    var topic = $(this).data("project-name");
+    var current = $(".research-info .content.active"),
+        topic = $(this).data("project-name"),
+        isMobile = Foundation.utils.is_small_only();
 
     if (current.hasClass(topic)) {
       topic = "default";
@@ -81,13 +82,18 @@ researchInfo = function() {
 }
 
 workWheel = function() {
-  // add .active to the first one
-  $(".work-wheel .work-item").first().addClass("active");
-  $(".work-content-wrap .work-content-item").first().addClass("active").removeClass("to-right").removeClass("to-left");
-
   // get middle of .work-wrap
   var workMiddle = $(".work-wrap").width() / 2;
   $(".work-wheel").css('left', workMiddle);
+
+  // add .active to the first one
+  if ($(".work-wheel .work-item").hasClass("active")) {
+    // only need to ensure that the centered element is centered:
+    $(".work-wheel").css("left", workMiddle - $(".work-wheel .work-item.active").position().left - $(".work-wheel .work-item.active img").width()/2);
+  } else {
+    $(".work-wheel .work-item").first().addClass("active");
+    $(".work-content-wrap .work-content-item").first().addClass("active").removeClass("to-right").removeClass("to-left");
+  }
 
   // now, whenever an item is clicked, do something:
   $(".work-item img").on("click", function() {
