@@ -82,6 +82,9 @@ researchInfo = function() {
 }
 
 workWheel = function() {
+  var maxHeight = -1,
+      isMobile = Foundation.utils.is_small_only();
+
   // get middle of .work-wrap
   var workMiddle = $(".work-wrap").width() / 2;
   $(".work-wheel").css('left', workMiddle);
@@ -95,6 +98,16 @@ workWheel = function() {
     $(".work-content-wrap .work-content-item").first().addClass("active").removeClass("to-right").removeClass("to-left");
   }
 
+  if (isMobile) {
+    $(".work-content-wrap").height($(".work-content-wrap .work-content-item.active .work-description").height() + $(".work-content-wrap .work-content-item.active .work-details").height());
+  } else {
+    $(".work-content-wrap .work-content-item .work-description").each(function() {
+      if ($(this).height() > maxHeight)
+        maxHeight = $(this).height();
+    });
+    $(".work-content-wrap").height(maxHeight);
+  }
+
   // now, whenever an item is clicked, do something:
   $(".work-item img").on("click", function() {
     var $this = $(this),
@@ -102,7 +115,8 @@ workWheel = function() {
         fromLeft = - $cont.position().left,
         newPos = workMiddle + fromLeft - $this.width()/2,
         index = $(".work-wheel .work-item").index($cont),
-        oldIndex = $(".work-wheel .work-item").index($(".work-wheel .work-item.active"));
+        oldIndex = $(".work-wheel .work-item").index($(".work-wheel .work-item.active")),
+        isMobile = Foundation.utils.is_small_only();
 
     if (!$cont.hasClass("active")) {
       $(".work-wheel .work-item.active").removeClass("active");
@@ -113,6 +127,13 @@ workWheel = function() {
         // move in new text
       } else {
         $(".work-content-item:eq("+oldIndex+")").removeClass("active").addClass("to-right");
+      }
+
+      if (isMobile) {
+        //  resize the div
+        $(".work-content-wrap").animate({
+          height: $(".work-content-wrap .work-content-item:eq("+index+") .work-description").height() + $(".work-content-wrap .work-content-item:eq("+index+") .work-details").height()
+        }, 500);
       }
 
       setTimeout(function() {

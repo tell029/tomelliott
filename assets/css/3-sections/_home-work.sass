@@ -65,9 +65,9 @@
     .work-content-item
       position: absolute
       top: 0
-      bottom: 0
       left: 0
       right: 0
+      bottom: auto
       opacity: 0
       transition: all 500ms ease-in-out
 
@@ -78,11 +78,35 @@
 
       &.active
         opacity: 1
-        //transform: translate(0, 0) scale(1)
+
+    .work-details
+      .date
+        font-size: 0.8rem
+        margin: 0
+
+      .visit-site
+        display: block
+        font-size: 0.8rem
+        text-align: right
+
+    .work-description
+      padding-top: 7px
 
   @media (min-width: $small-breakpoint)
     .work-details
       text-align: right
 
-  .work-description
-    padding-top: 7px
+      .visit-site
+        text-align: right
+
+  @media (max-width: $small-breakpoint)
+    .work-details
+
+      &::after
+        display: block
+        margin-top: 10px
+        border: 0
+        height: 1px
+        background-image: linear-gradient(to right, fade-out($accent-color, 1), fade-out($accent-color, 0.25), fade-out($accent-color, 1))
+        opacity: 0.5
+        content: ""

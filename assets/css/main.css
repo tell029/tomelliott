@@ -6648,7 +6648,7 @@ pre {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand"; }
 
-hr {
+.gradient-line, hr {
   border: 0;
   height: 1px;
   background-image: -webkit-linear-gradient(left, rgba(0, 120, 160, 0), rgba(0, 120, 160, 0.75), rgba(0, 120, 160, 0));
@@ -6877,9 +6877,9 @@ h2 {
   #projects .work-content-wrap .work-content-item {
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
+    bottom: auto;
     opacity: 0;
     -webkit-transition: all 500ms ease-in-out;
             transition: all 500ms ease-in-out; }
@@ -6893,13 +6893,32 @@ h2 {
               transform: translate(-150%, 0) scale(0.5); }
     #projects .work-content-wrap .work-content-item.active {
       opacity: 1; }
+  #projects .work-content-wrap .work-details .date {
+    font-size: 0.8rem;
+    margin: 0; }
+  #projects .work-content-wrap .work-details .visit-site {
+    display: block;
+    font-size: 0.8rem;
+    text-align: right; }
+  #projects .work-content-wrap .work-description {
+    padding-top: 7px; }
 
 @media (min-width: 40em) {
   #projects .work-details {
-    text-align: right; } }
+    text-align: right; }
+    #projects .work-details .visit-site {
+      text-align: right; } }
 
-#projects .work-description {
-  padding-top: 7px; }
+@media (max-width: 40em) {
+  #projects .work-details::after {
+    display: block;
+    margin-top: 10px;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0, 120, 160, 0), rgba(0, 120, 160, 0.75), rgba(0, 120, 160, 0));
+    background-image: linear-gradient(to right, rgba(0, 120, 160, 0), rgba(0, 120, 160, 0.75), rgba(0, 120, 160, 0));
+    opacity: 0.5;
+    content: ""; } }
 
 #contact {
   margin-bottom: 50px;
