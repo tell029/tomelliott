@@ -146,9 +146,11 @@ workWheel = function() {
 
 scrollEffects = function() {
   var researchTop = $("#research").offset().top;
+  console.log(researchTop);
   $(window).scroll(function() {
     var winPos = $(window).scrollTop();
     var winHt = $(window).height();
+    console.log(winHt);
 
     // Research section - face image jumps up
     if (winPos > (researchTop - (winHt / 2))) {
