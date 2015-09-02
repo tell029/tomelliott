@@ -6693,6 +6693,16 @@ h2 {
     color: white;
     font-family: "Lato"; }
 
+#footer {
+  background: #0078A0;
+  color: white;
+  padding: 20px 0;
+  text-align: center; }
+  #footer .copyright, #footer .cc {
+    padding: 0;
+    margin: 0;
+    font-size: 0.9em; }
+
 #about {
   padding: 20px 0; }
   #about .face-image {
@@ -6798,6 +6808,8 @@ h2 {
         -webkit-transform: translate(0, -100%);
             -ms-transform: translate(0, -100%);
                 transform: translate(0, -100%); }
+    #research .research-info .source {
+      font-size: 0.7em; }
 
 .publications .publication {
   background: #eee;
@@ -6922,7 +6934,8 @@ h2 {
 
 #contact {
   margin-bottom: 50px;
-  padding-top: 50px; }
+  padding-top: 50px;
+  text-align: center; }
   #contact .email {
     text-align: center; }
     #contact .email a {
@@ -6935,7 +6948,7 @@ h2 {
         #contact .email a {
           font-size: 1.2rem; } }
   #contact .social-icons {
-    margin-top: 30px;
+    margin: 30px 0 20px;
     text-align: center; }
     #contact .social-icons .twitter-icon,
     #contact .social-icons .github-icon {

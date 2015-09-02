@@ -25,6 +25,8 @@
         <h5>{{ topic.title }}</h5>
         <h6 class="subheader">{{ topic.type }}</h6>{% for para in topic.text %}
         <p class="smaller">{{ para }}</p>{% endfor %}
+        {% if topic.source %}
+        <p class="source">Banner image source:<a href="{{ topic.sourceURL }}"> {{ topic.source }}</a></p>{% endif %}
       </div>{% endfor %}
     </div>
     <div class="small-12 medium-4 large-5 columns research-topics medium-pull-8 large-pull-7">
