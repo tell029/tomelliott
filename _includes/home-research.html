@@ -1,5 +1,5 @@
 
-<div id="research">
+<div id="research" class="uninitialised">
   <div class="row">
     <div class="small-12 columns">
       <h2>Research
@@ -25,6 +25,10 @@
         <h5>{{ topic.title }}</h5>
         <h6 class="subheader">{{ topic.type }}</h6>{% for para in topic.text %}
         <p class="smaller">{{ para }}</p>{% endfor %}
+        {% if topic.extra %}
+        {% for ex in topic.extra %}
+        <p class="extra"><a href="{{ ex.url }}"> {{ ex.text }}</a></p>{% endfor %}
+        {% endif %}
         {% if topic.source %}
         <p class="source">Banner image source:<a href="{{ topic.sourceURL }}"> {{ topic.source }}</a></p>{% endif %}
       </div>{% endfor %}

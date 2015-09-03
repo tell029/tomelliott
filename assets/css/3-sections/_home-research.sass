@@ -1,7 +1,11 @@
 #research
   position: relative
   overflow: hidden
+  opacity: 1
+  transition: opacity 700ms ease-in-out
 
+  &.uninitialised
+    opacity: 0
 
   .research-topics
     margin: 10px auto 20px
@@ -92,6 +96,13 @@
         transform: translate(0, -100%)
         //@media (max-width: $small-breakpoint)
           transform: translate(-100%, 0)
+
+    .extra
+      text-align: right
+      margin-right: 20px
+      font-size: 0.9em
+      display: inline-block
+      float: right
 
     .source
       font-size: 0.7em

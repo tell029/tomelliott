@@ -4,16 +4,23 @@ $(document).ready(function(){
   headerStartup();
   navigationScrolling();
   scrollEffects();
+  researchInfoSetup();
   researchInfo();
   workWheel();
   resizeEvents();
 });
 
 headerStartup = function() {
-  $('.header').waitForImages(function() {
+  $(document).waitForImages(function() {
     setTimeout(function() {
       $('.header').removeClass("uninitialised");
+    });
+    setTimeout(function() {
+      $('#about').removeClass("uninitialised");
     }, 500);
+    setTimeout(function() {
+      $('#research').removeClass("uninitialised");
+    }, 1000);
   });
 }
 
@@ -30,7 +37,7 @@ navigationScrolling = function() {
   });
 }
 
-researchInfo = function() {
+researchInfoSetup = function() {
   // resize to fit the content
   var maxHeight = -1,
       isMobile = Foundation.utils.is_small_only();
@@ -44,7 +51,9 @@ researchInfo = function() {
     });
     $(".research-info").height(maxHeight);
   }
+}
 
+researchInfo = function() {
   $(".research-topics .topic-meta").on("click", function() {
     var current = $(".research-info .content.active"),
         topic = $(this).data("project-name"),
@@ -81,7 +90,7 @@ researchInfo = function() {
   });
 }
 
-workWheel = function() {
+workWheelSetup = function() {
   var maxHeight = -1,
       isMobile = Foundation.utils.is_small_only();
 
@@ -107,11 +116,14 @@ workWheel = function() {
     });
     $(".work-content-wrap").height(maxHeight);
   }
+}
 
+workWheel = function() {
   // now, whenever an item is clicked, do something:
   $(".work-item img").on("click", function() {
     var $this = $(this),
         $cont = $this.parent(),
+        workMiddle = $(".work-wrap").width() / 2,
         fromLeft = - $cont.position().left,
         newPos = workMiddle + fromLeft - $this.width()/2,
         index = $(".work-wheel .work-item").index($cont),
@@ -146,13 +158,14 @@ workWheel = function() {
 
 scrollEffects = function() {
   var researchTop = $("#research").offset().top;
-  console.log(researchTop);
+  var projectsTop = $("#projects").offset().top;
+
   $(window).scroll(function() {
     var winPos = $(window).scrollTop();
     var winHt = $(window).height();
-    console.log(winHt);
 
-    // Research section - face image jumps up
+
+    // Research section
     if (winPos > (researchTop - (winHt / 2))) {
       $("#research .research-topics .topic").each(function(i){
         setTimeout(function(){
@@ -160,12 +173,17 @@ scrollEffects = function() {
         }, 400 * i);
       });
     }
+
+    // Projects section
+    if (winPos > (projectsTop - (winHt / 2))) {
+      workWheelSetup();
+    }
   });
 }
 
 resizeEvents = function() {
   $(window).resize(function(){
-    researchInfo();
-    workWheel();
+    researchInfoSetup();
+    workWheelSetup();
   });
 }

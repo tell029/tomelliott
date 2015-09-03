@@ -6704,7 +6704,12 @@ h2 {
     font-size: 0.9em; }
 
 #about {
-  padding: 20px 0; }
+  padding: 20px 0;
+  opacity: 1;
+  -webkit-transition: opacity 700ms ease-in-out;
+          transition: opacity 700ms ease-in-out; }
+  #about.uninitialised {
+    opacity: 0; }
   #about .face-image {
     background-image: url(../img/about-face.gif);
     background-size: cover;
@@ -6721,7 +6726,12 @@ h2 {
 
 #research {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: opacity 700ms ease-in-out;
+          transition: opacity 700ms ease-in-out; }
+  #research.uninitialised {
+    opacity: 0; }
   #research .research-topics {
     margin: 10px auto 20px; }
     #research .research-topics .topic {
@@ -6808,6 +6818,12 @@ h2 {
         -webkit-transform: translate(0, -100%);
             -ms-transform: translate(0, -100%);
                 transform: translate(0, -100%); }
+    #research .research-info .extra {
+      text-align: right;
+      margin-right: 20px;
+      font-size: 0.9em;
+      display: inline-block;
+      float: right; }
     #research .research-info .source {
       font-size: 0.7em; }
 

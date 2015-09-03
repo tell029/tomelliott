@@ -1,6 +1,6 @@
 include ../_jademixins/mixins
 
-#research
+#research.uninitialised
   .row
     .small-12.columns
       +sectiontitle('Research')
@@ -28,6 +28,13 @@ include ../_jademixins/mixins
         {% for para in topic.text %}
         p.smaller {{ para }}
         {% endfor %}
+        
+        {% if topic.extra %}
+        {% for ex in topic.extra %}
+        p.extra
+          a(href="{{ ex.url }}")  {{ ex.text }}
+        {% endfor %}
+        {% endif %}
 
         {% if topic.source %}
         p.source Banner image source:
