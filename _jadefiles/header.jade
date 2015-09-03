@@ -3,13 +3,8 @@
   nav(data-topbar data-options="sticky_on: [large,medium]" role="navigation").top-bar
     ul.title-area
       li.name
-      li.toggle-topbar.menu-icon
-        a(href="#"): span
-    section.top-bar-section
-      ul.right#site-navigation
-        {% for nav in site.data.home.navigation %}
-        li: a(href="" data-section="{{ nav.section }}") {{ nav.name }}
-        {% endfor %}
+
+
 
 // HERO HEADER
 section.header.uninitialised

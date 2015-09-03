@@ -6664,7 +6664,11 @@ h2 {
     font-size: 2em; }
 
 .header {
+<<<<<<< HEAD
   background-image: url(../img/hero-bg.jpg);
+=======
+  background-image: url(../img/hero-bg-boi.jpg);
+>>>>>>> 45a0ac04913c3f7c270a15fbbebe50c98304a27a
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
