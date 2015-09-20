@@ -6964,7 +6964,7 @@ h2 {
         #contact .email a {
           font-size: 1.2rem; } }
   #contact .social-icons {
-    margin: 30px 0 20px;
+    margin: 30px auto 20px;
     text-align: center; }
     #contact .social-icons .twitter-icon,
     #contact .social-icons .github-icon {
