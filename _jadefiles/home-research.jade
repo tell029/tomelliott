@@ -43,8 +43,7 @@ include ../_jademixins/mixins
       {% endfor %}
 
     .small-12.medium-4.large-5.columns.research-topics.medium-pull-8.large-pull-7
-      {% for topic_hash in site.data.research %}
-      {% assign topic = topic_hash[1] %}
+      {% for topic in site.data.research %}
       .topic.start-hidden.from-below(class="{{ topic.name }}" style="background-image:url(assets/img/projects/{{topic.image}}); background-position: {{ topic.position }}")
         .topic-meta(data-project-name="{{ topic.name }}")
           p {{ topic.project }}, #[em {{ topic.date }}]
