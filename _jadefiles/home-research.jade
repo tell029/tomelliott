@@ -19,8 +19,7 @@ include ../_jademixins/mixins
         p.show-for-small-only Click the images below for information about specific research projects I have done.
         p.hide-for-small-only Click the images to the left for information about specific research projects I have done.
 
-      {% for topic_hash in site.data.research %}
-      {% assign topic = topic_hash[1] %}
+      {% for topic in site.data.research %}
       .content(class="{{ topic.name }}")
         h5 {{ topic.title }}
         h6.subheader {{ topic.type }}
@@ -28,7 +27,7 @@ include ../_jademixins/mixins
         {% for para in topic.text %}
         p.smaller {{ para }}
         {% endfor %}
-        
+
         {% if topic.extra %}
         {% for ex in topic.extra %}
         p.extra
