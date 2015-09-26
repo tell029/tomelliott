@@ -6615,7 +6615,7 @@ body {
   background: #fff;
   font-size: 14px;
   line-height: 1.6;
-  font-family: 'Lato' sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   color: #333;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
@@ -6646,7 +6646,7 @@ pre {
   display: inline-block; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Quicksand"; }
+  font-family: "Quicksand", Arial, sans-serif; }
 
 .gradient-line, hr {
   border: 0;
@@ -6656,7 +6656,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.8; }
 
 h2 {
-  font-family: "Quicksand";
+  font-family: "Quicksand", Arial, sans-serif;
   color: #0078A0; }
   h2 pre {
     font-size: 0.5em; }
@@ -6678,7 +6678,6 @@ h2 {
   .header h1 {
     width: 100%;
     margin: 3rem 0;
-    font-family: "Quicksand", serif;
     font-size: 5rem;
     font-weight: 300;
     color: white;
@@ -6691,7 +6690,7 @@ h2 {
         font-size: 2.5rem; } }
   .header p {
     color: white;
-    font-family: "Lato"; }
+    font-family: "Lato", Arial, sans-serif; }
 
 #footer {
   background: #0078A0;
@@ -6956,7 +6955,7 @@ h2 {
     text-align: center; }
     #contact .email a {
       font-size: 2rem;
-      font-family: "Quicksand"; }
+      font-family: "Quicksand", Arial, sans-serif; }
       @media (max-width: 500px) {
         #contact .email a {
           font-size: 1.5rem; } }
