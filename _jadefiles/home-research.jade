@@ -31,7 +31,7 @@ include ../_jademixins/mixins
         {% if topic.extra %}
         {% for ex in topic.extra %}
         p.extra
-          a(href="{{ ex.url }}")  {{ ex.text }}
+          a(href="{{ ex.url }}" class="button tiny")  {{ ex.text }}
         {% endfor %}
         {% endif %}
 

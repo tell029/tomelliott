@@ -26,7 +26,7 @@
         <p class="smaller">{{ para }}</p>{% endfor %}
         {% if topic.extra %}
         {% for ex in topic.extra %}
-        <p class="extra"><a href="{{ ex.url }}"> {{ ex.text }}</a></p>{% endfor %}
+        <p class="extra"><a href="{{ ex.url }}" class="button tiny"> {{ ex.text }}</a></p>{% endfor %}
         {% endif %}
         {% if topic.source %}
         <p class="source">Banner image source:<a href="{{ topic.sourceURL }}"> {{ topic.source }}</a></p>{% endif %}

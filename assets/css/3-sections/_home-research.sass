@@ -79,7 +79,7 @@
       right: 0
       padding: 10px 15px
       opacity: 0
-      transform: translate(0, 100%)
+      transform: translate(0, 150%)
       transition: all 400ms cubic-bezier(0.190, 1.000, 0.350, 1.335)
 
       @media (max-width: $small-breakpoint)
@@ -93,7 +93,7 @@
 
       &.blast-off
         opacity: 0
-        transform: translate(0, -100%)
+        transform: translate(0, -150%)
         //@media (max-width: $small-breakpoint)
           transform: translate(-100%, 0)
 
@@ -103,6 +103,7 @@
       font-size: 0.9em
       display: inline-block
       float: right
+      z-index: 5
 
     .source
       font-size: 0.7em
