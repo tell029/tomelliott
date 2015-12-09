@@ -23,6 +23,10 @@
     <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml?v=all5gE58dB">
     <meta name="theme-color" content="#42c0e9">
 
+    {% if jekyll.environemnt == "production" %}
+      <script src="/assets/js/googleanalytics.js"></script>
+    {% endif %}
+
     <script src="/assets/js/vendor/modernizr.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
