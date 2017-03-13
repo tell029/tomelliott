@@ -1202,7 +1202,7 @@ h6, .h6 {
     font-size: 75%; }
 
 h1, .h1 {
-  font-size: 30px; }
+  font-size: 36px; }
 
 h2, .h2 {
   font-size: 30px; }
@@ -10399,17 +10399,37 @@ button.close {
   overflow: visible;
   clip: auto; }
 
-h1 {
+section {
+  margin-bottom: 5em;
+  padding: 5em 0;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); }
+
+@media (min-width: 768px) {
+  section {
+    margin: 5em; } }
+h1, h2 {
+  margin-bottom: 2em;
   padding: 0 0 5px;
-  margin: 20vh 0 2em;
   text-align: center;
   color: #DFEDF7;
   border-bottom: solid 1px #DFEDF7; }
 
 #about {
-  padding: 2em 0;
   background: #83aac9;
-  min-height: 100vh;
   line-height: 1.8;
   text-align: center;
   color: #3A688C; }
+
+#research {
+  background: #82CFAE; }
+  #research h2 {
+    color: #DEF8ED;
+    border-color: #DEF8ED; }
+  #research h3 {
+    color: #3A688C; }
+
+#work {
+  background: #8F8FD2; }
+  #work h2 {
+    color: #E2E2F9;
+    border-color: #E2E2F9; }
