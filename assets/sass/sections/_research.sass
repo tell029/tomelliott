@@ -6,4 +6,48 @@
         border-color: $brand-success-lighter
 
     h3
-        color: $brand-primary-darker
+        color: $brand-success-darker
+
+
+#researchnav
+    ul
+        border-top: solid 2px $brand-success-darker
+        text-align: center
+
+        li
+            display: inline-block
+            margin: 0 10vw
+            padding-top: 5px
+            position: relative
+            color: $brand-success-darker
+
+            &:before
+                content: ''
+                display: block
+                position: absolute
+                top: 0
+                left: 50%
+                height: 10px
+                width: 10px
+                transform: translate(-5px, -6px)
+                background: $brand-success
+                border: solid 2px $brand-success-darker
+                border-radius: 5px
+                transition: background 200ms ease-in-out
+
+            &:nth-child(1)
+                &:before
+                    background: $brand-success-darker
+
+            &:hover
+                cursor: pointer
+                &:before
+                    background: $brand-success-darker
+
+
+#researchItems
+    width: 300%
+    display: flex
+
+    .research-item
+        width: 33%
