@@ -1,5 +1,6 @@
 #research
     background: $brand-success
+    overflow: hidden
 
     h2
         color: $brand-success-lighter
@@ -12,6 +13,9 @@
 #researchnav
     ul
         border-top: solid 2px $brand-success-darker
+        border-bottom-width: 0
+        border-image: linear-gradient(to left, transparentize($brand-success-darker, 1) 0%, $brand-success-darker 10%, $brand-success-darker 90%, transparentize($brand-success-darker, 1) 100%)
+        border-image-slice: 1
         text-align: center
 
         li
@@ -35,7 +39,7 @@
                 border-radius: 5px
                 transition: background 200ms ease-in-out
 
-            &:nth-child(1)
+            &.active
                 &:before
                     background: $brand-success-darker
 
@@ -45,9 +49,15 @@
                     background: $brand-success-darker
 
 
+#researchItemContainer
+    transform: translateX(-200%)
+    transition: all 500ms ease-in-out
+
 #researchItems
+    // background: pink
     width: 300%
     display: flex
+    flex-direction: row-reverse
 
     .research-item
-        width: 33%
+        width: calc(100% / 3)

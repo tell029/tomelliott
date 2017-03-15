@@ -10402,7 +10402,12 @@ button.close {
 section {
   margin-bottom: 5em;
   padding: 5em 0;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); }
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  section:hover {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01); }
 
 @media (min-width: 768px) {
   section {
@@ -10421,7 +10426,8 @@ h1, h2 {
   color: white; }
 
 #research {
-  background: #82CFAE; }
+  background: #82CFAE;
+  overflow: hidden; }
   #research h2 {
     color: #DEF8ED;
     border-color: #DEF8ED; }
@@ -10430,6 +10436,11 @@ h1, h2 {
 
 #researchnav ul {
   border-top: solid 2px #37966D;
+  border-bottom-width: 0;
+  -o-border-image: linear-gradient(to left, rgba(55, 150, 109, 0) 0%, #37966D 10%, #37966D 90%, rgba(55, 150, 109, 0) 100%);
+     border-image: -webkit-linear-gradient(right, rgba(55, 150, 109, 0) 0%, #37966D 10%, #37966D 90%, rgba(55, 150, 109, 0) 100%);
+     border-image: linear-gradient(to left, rgba(55, 150, 109, 0) 0%, #37966D 10%, #37966D 90%, rgba(55, 150, 109, 0) 100%);
+  border-image-slice: 1;
   text-align: center; }
   #researchnav ul li {
     display: inline-block;
@@ -10452,20 +10463,30 @@ h1, h2 {
       border-radius: 5px;
       -webkit-transition: background 200ms ease-in-out;
       transition: background 200ms ease-in-out; }
-    #researchnav ul li:nth-child(1):before {
+    #researchnav ul li.active:before {
       background: #37966D; }
     #researchnav ul li:hover {
       cursor: pointer; }
       #researchnav ul li:hover:before {
         background: #37966D; }
 
+#researchItemContainer {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
+
 #researchItems {
   width: 300%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
   #researchItems .research-item {
-    width: 33%; }
+    width: calc(100% / 3); }
 
 #work {
   background: #8F8FD2; }
