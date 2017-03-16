@@ -1,52 +1,65 @@
+$research-col-main: $brand-success-darker
+$research-col-alt: $brand-success-lighter
+
 #research
     background: $brand-success
     overflow: hidden
+    color: #333333
 
     h2
-        color: $brand-success-lighter
-        border-color: $brand-success-lighter
+        color: $research-col-main
+        border-color: $research-col-main
 
     h3
-        color: $brand-success-darker
+        color: $research-col-main
 
 
 #researchnav
+    margin-top: 3em
+    margin-bottom: 2em
     ul
-        border-top: solid 2px $brand-success-darker
-        border-bottom-width: 0
-        border-image: linear-gradient(to left, transparentize($brand-success-darker, 1) 0%, $brand-success-darker 10%, $brand-success-darker 90%, transparentize($brand-success-darker, 1) 100%)
+        border-bottom: solid 2px $research-col-alt
+        border-top-width: 0
+        border-image: linear-gradient(to left, transparentize($research-col-alt, 1) 0%, $research-col-alt 10%, $research-col-alt 90%, transparentize($research-col-alt, 1) 100%)
         border-image-slice: 1
         text-align: center
 
         li
             display: inline-block
             margin: 0 10vw
-            padding-top: 5px
+            padding-bottom: 5px
             position: relative
-            color: $brand-success-darker
+            color: $research-col-alt
+
+            label
+                position: absolute
+                top: 0
+                left: 50%
+                width: 500px
+                height: 500px
 
             &:before
                 content: ''
                 display: block
                 position: absolute
-                top: 0
+                bottom: 0
                 left: 50%
                 height: 10px
                 width: 10px
-                transform: translate(-5px, -6px)
+                transform: translate(-5px, 6px)
                 background: $brand-success
-                border: solid 2px $brand-success-darker
+                border: solid 2px $research-col-alt
                 border-radius: 5px
                 transition: background 200ms ease-in-out
 
             &.active
                 &:before
-                    background: $brand-success-darker
+                    background: $research-col-alt
 
             &:hover
                 cursor: pointer
                 &:before
-                    background: $brand-success-darker
+                    background: $research-col-alt
 
 
 #researchItemContainer
