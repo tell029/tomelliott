@@ -10409,7 +10409,7 @@ section {
     -webkit-transform: scale(1.01);
             transform: scale(1.01); }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   section {
     margin: 5em; } }
 h1, h2 {
@@ -10439,11 +10439,11 @@ h1, h2 {
   margin-top: 3em;
   margin-bottom: 2em; }
   #researchnav ul {
-    border-bottom: solid 2px #DEF8ED;
+    border-bottom: solid 2px #3A688C;
     border-top-width: 0;
-    -o-border-image: linear-gradient(to left, rgba(222, 248, 237, 0) 0%, #DEF8ED 10%, #DEF8ED 90%, rgba(222, 248, 237, 0) 100%);
-       border-image: -webkit-linear-gradient(right, rgba(222, 248, 237, 0) 0%, #DEF8ED 10%, #DEF8ED 90%, rgba(222, 248, 237, 0) 100%);
-       border-image: linear-gradient(to left, rgba(222, 248, 237, 0) 0%, #DEF8ED 10%, #DEF8ED 90%, rgba(222, 248, 237, 0) 100%);
+    -o-border-image: linear-gradient(to left, rgba(58, 104, 140, 0) 0%, #3A688C 10%, #3A688C 90%, rgba(58, 104, 140, 0) 100%);
+       border-image: -webkit-linear-gradient(right, rgba(58, 104, 140, 0) 0%, #3A688C 10%, #3A688C 90%, rgba(58, 104, 140, 0) 100%);
+       border-image: linear-gradient(to left, rgba(58, 104, 140, 0) 0%, #3A688C 10%, #3A688C 90%, rgba(58, 104, 140, 0) 100%);
     border-image-slice: 1;
     text-align: center; }
     #researchnav ul li {
@@ -10451,13 +10451,22 @@ h1, h2 {
       margin: 0 10vw;
       padding-bottom: 5px;
       position: relative;
-      color: #DEF8ED; }
-      #researchnav ul li label {
+      color: #3A688C; }
+      #researchnav ul li .label {
+        font-size: 0.9em;
         position: absolute;
-        top: 0;
+        display: block;
+        top: 150%;
         left: 50%;
-        width: 500px;
-        height: 500px; }
+        width: 300px;
+        height: 20px;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        text-align: center;
+        color: #3A688C;
+        opacity: 0;
+        -webkit-transition: opacity 100ms ease-in-out;
+        transition: opacity 100ms ease-in-out; }
       #researchnav ul li:before {
         content: "";
         display: block;
@@ -10469,16 +10478,28 @@ h1, h2 {
         -webkit-transform: translate(-5px, 6px);
                 transform: translate(-5px, 6px);
         background: #82CFAE;
-        border: solid 2px #DEF8ED;
+        border: solid 2px #3A688C;
         border-radius: 5px;
         -webkit-transition: background 200ms ease-in-out;
         transition: background 200ms ease-in-out; }
-      #researchnav ul li.active:before {
-        background: #DEF8ED; }
+      #researchnav ul li.active .label, #researchnav ul li:hover .label {
+        opacity: 1; }
+      #researchnav ul li.active:before, #researchnav ul li:hover:before {
+        background: #3A688C; }
       #researchnav ul li:hover {
         cursor: pointer; }
-        #researchnav ul li:hover:before {
-          background: #DEF8ED; }
+      @media (max-width: 480px) {
+        #researchnav ul li:nth-of-type(1) .label {
+          -webkit-transform: translateX(-1em);
+                  transform: translateX(-1em);
+          text-align: left;
+          left: 0; }
+        #researchnav ul li:nth-of-type(3) .label {
+          -webkit-transform: translateX(1em);
+                  transform: translateX(1em);
+          left: auto;
+          right: 0;
+          text-align: right; } }
 
 #researchItemContainer {
   -webkit-transform: translateX(-200%);

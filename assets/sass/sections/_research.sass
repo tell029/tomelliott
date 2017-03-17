@@ -1,5 +1,6 @@
 $research-col-main: $brand-success-darker
-$research-col-alt: $brand-success-lighter
+$research-col-alt: $brand-primary-darker
+// $research-col-alt: $brand-success-lighter
 
 #research
     background: $brand-success
@@ -31,12 +32,20 @@ $research-col-alt: $brand-success-lighter
             position: relative
             color: $research-col-alt
 
-            label
+            .label
+                font-size: 0.9em
                 position: absolute
-                top: 0
+                display: block
+                top: 150%
                 left: 50%
-                width: 500px
-                height: 500px
+                width: 300px
+                height: 20px
+                transform: translateX(-50%)
+                text-align: center
+                color: $brand-primary-darker
+                opacity: 0
+                transition: opacity 100ms ease-in-out
+
 
             &:before
                 content: ''
@@ -52,14 +61,26 @@ $research-col-alt: $brand-success-lighter
                 border-radius: 5px
                 transition: background 200ms ease-in-out
 
-            &.active
+            &.active, &:hover
+                .label
+                    opacity: 1
                 &:before
                     background: $research-col-alt
 
             &:hover
                 cursor: pointer
-                &:before
-                    background: $research-col-alt
+
+            @media (max-width: $screen-xs-min)
+                &:nth-of-type(1) .label
+                    transform: translateX(-1em)
+                    text-align: left
+                    left: 0
+                &:nth-of-type(3) .label
+                    transform: translateX(1em)
+                    left: auto
+                    right: 0
+                    text-align: right
+
 
 
 #researchItemContainer
