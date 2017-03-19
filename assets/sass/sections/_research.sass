@@ -110,6 +110,7 @@ $research-col-alt: $brand-primary-darker
             border: none
             height: 100%
             vertical-align: middle
+            text-align: center
 
             p
                 margin: 0
@@ -124,6 +125,8 @@ $research-col-alt: $brand-primary-darker
             display: inline-block
             border-radius: 5px
             overflow: hidden
+            box-shadow: 5px 6px 7px rgba(0,0,0,0.2)
+            transition: all 200ms ease-in-out
 
             img
                 width: 15vw
@@ -151,7 +154,19 @@ $research-col-alt: $brand-primary-darker
 
             &:hover
                 border: none
+                box-shadow: 7px 8px 9px 2px rgba(0,0,0,0.1)
+                transform: translateY(-2px)
 
                 .read
                     opacity: 0.9
                     font-weight: bold
+
+    .thumbnail
+        margin-top: 2em
+        padding: 1em
+        font-size: 0.9em
+        background: $brand-success-lighter
+        box-shadow: 5px 6px 7px rgba(0,0,0,0.2)
+
+        .fa
+            margin-right: 0.5em

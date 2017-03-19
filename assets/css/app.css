@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Lato|Montserrat|Satisfy");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat");
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -10549,7 +10549,8 @@ a {
       margin-left: 2em;
       border: none;
       height: 100%;
-      vertical-align: middle; }
+      vertical-align: middle;
+      text-align: center; }
       #researchItems .pdf-preview .read p {
         margin: 0; }
         #researchItems .pdf-preview .read p .fa {
@@ -10561,7 +10562,10 @@ a {
       position: relative;
       display: inline-block;
       border-radius: 5px;
-      overflow: hidden; }
+      overflow: hidden;
+      box-shadow: 5px 6px 7px rgba(0, 0, 0, 0.2);
+      -webkit-transition: all 200ms ease-in-out;
+      transition: all 200ms ease-in-out; }
       #researchItems .pdf-preview img {
         width: 15vw; }
       #researchItems .pdf-preview .read {
@@ -10586,10 +10590,21 @@ a {
           -webkit-transform: translateY(-50%);
                   transform: translateY(-50%); }
       #researchItems .pdf-preview:hover {
-        border: none; }
+        border: none;
+        box-shadow: 7px 8px 9px 2px rgba(0, 0, 0, 0.1);
+        -webkit-transform: translateY(-2px);
+                transform: translateY(-2px); }
         #researchItems .pdf-preview:hover .read {
           opacity: 0.9;
           font-weight: bold; } }
+  #researchItems .thumbnail {
+    margin-top: 2em;
+    padding: 1em;
+    font-size: 0.9em;
+    background: #DEF8ED;
+    box-shadow: 5px 6px 7px rgba(0, 0, 0, 0.2); }
+    #researchItems .thumbnail .fa {
+      margin-right: 0.5em; }
 
 #work {
   background: #8F8FD2; }

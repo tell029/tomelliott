@@ -104,8 +104,8 @@
                         <div class="row">
                             <div class="col-sm-8">
                                 <p>
-                                    <strong>Abstract:</strong>
-                                    The size-selectivity of fishing gear is of particular interest to fisheries managers, aiding in the reduction of by-catch and increase of profits. Size-selectivity models have typically been fitted using <span data-tooltip aria-haspopup="true" class="has-tip" title="Generalised Linear Models">GLMs</span> and mixed-effects models implemented using software such as SAS. We investigate a Bayesian approach to fitting these models, with special focus on the comparability of frequentist and Bayesian models. We look at several case studies, which are used to establish the validity of our models by comparing our results to those published in previous analyses. <span data-tooltip aria-haspopup="true" class="has-tip" title="Mackov chain Monte Carlo">MCMC</span> diagnostic tests and <span data-tooltip aria-haspopup="true" class="has-tip" title="Posterior Predictive Checks">PPCs</span> for overdispersion are explored, and random-effects are shown to be the preferred method of modelling overdispersion in the data. Having formulated a general model, several extensions are investigated. The Poisson distribution is used as an alternative likelihood function, allowing the models to make use of any population size distribution information, and multiple random-effects models are implemented that were previously found to be too complex. Semiparametric selection curves&mdash;notably basis splines&mdash;are used with the constraint that they be continuous, non-decreasing functions of length. A new R package, <code>BSM</code>, is introduced as a simple tool for fitting many of the Bayesian selectivity models discussed in this thesis.
+                                    <strong class="text-uppercase small">Abstract:</strong>
+                                    The size-selectivity of fishing gear is of particular interest to fisheries managers, aiding in the reduction of by-catch and increase of profits. Size-selectivity models have typically been fitted using <abbr title="Generalised Linear Models" class="initialism">GLMs</abbr> and mixed-effects models implemented using software such as SAS. We investigate a Bayesian approach to fitting these models, with special focus on the comparability of frequentist and Bayesian models. We look at several case studies, which are used to establish the validity of our models by comparing our results to those published in previous analyses. <abbr title="Mackov chain Monte Carlo">MCMC</abbr> diagnostic tests and <abbr title="Posterior Predictive Checks">PPCs</abbr> for overdispersion are explored, and random-effects are shown to be the preferred method of modelling overdispersion in the data. Having formulated a general model, several extensions are investigated. The Poisson distribution is used as an alternative likelihood function, allowing the models to make use of any population size distribution information, and multiple random-effects models are implemented that were previously found to be too complex. Semiparametric selection curves&mdash;notably basis splines&mdash;are used with the constraint that they be continuous, non-decreasing functions of length. <a href="http://tomelliott.co.nz/bsm">A new R package, <code>BSM</code></a>, is introduced as a simple tool for fitting many of the Bayesian selectivity models discussed in this thesis.
                                 </p>
                             </div>
 
@@ -128,9 +128,37 @@
                             Bayesian estimation of undetectable reverberation lags
                         </h3>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eos quis, repellendus tenetur! Mollitia eligendi ducimus necessitatibus itaque, animi quos quia eum labore, amet ea totam delectus molestias assumenda. Sunt!</p>
-                        <p>Deleniti voluptas mollitia illum amet voluptates perferendis quidem officiis pariatur minima et earum dignissimos inventore veniam quaerat, explicabo id odio dolore voluptate aperiam suscipit quae a. Nihil laboriosam laudantium aliquid.</p>
-                        <p>Tempore deserunt minus totam iure harum, ea esse necessitatibus sapiente cum assumenda doloremque deleniti! Asperiores reprehenderit ullam voluptate repudiandae quasi pariatur autem. Nesciunt sapiente deleniti dolore quos accusamus, recusandae fuga.</p>
+                        <div class="row">
+                            <div class="col-sm-9 col-sm-push-3">
+                                <p>
+                                    <strong class="text-uppercase small">Abstract:</strong>
+                                    Reverberation mapping is a technique used to infer the lag, <span class='math'>&tau;</span>, between two light curves obtained from two different regions of <abbr title="Active Galactic Nuclei" class="initialism">AGN</abbr>. The lag can later be used in the estimation of the mass of the central black hole. Traditional reverberation mapping methods involve the use of the <abbr title="Cross Correlation Function" class="initialism">CCF</abbr>, and more recently Bayesian models to estimate the lag, however these require long, expensive observational campaigns to obtain the data necessary to infer the lag accurately. The difficulty in obtaining the data has led to the development of a new technique where the <abbr title="Cross Correlation Function" class="initialism">CCF</abbr>s from multiple poorly-measured <abbr title="Active Galactic Nuclei" class="initialism">AGN</abbr> are combined, or stacked, to infer a typical lag for the sample. Through simulation, this method was shown to recover the lag, although the population lag variability and uncertainty of the lag estimate due to the sparse data were difficult to differentiate from the stacked <abbr title="Cross Correlation Function" class="initialism">CCF</abbr>. Therefore, we proposed using a Bayesian hierarchical model as an alternative, with the advantage of obtaining individual estimates for population variability and estimation error. After first implementing a simple model to show our method could be used to recover the population mean lag, we constructed a model that would analyse multiple <abbr title="Active Galactic Nuclei" class="initialism">AGN</abbr> and infer the population distribution of lags.  We were able to recover the population parameters, and their associated uncertainties, and show that the population variability was separable from the uncertainty in estimating the mean lag.
+                                </p>
+                                <div class="thumbnail">
+                                    <i class="fa fa-file-text-o"></i>
+                                    <a href="http://dx.doi.org/10.1093/mnrasl/slt174">
+                                        Brewer, B.J. &amp; Elliott, T.M. (2015) Heirarchical reverberation mapping. <i>Monthly Notices of the Royal Astronomical Society Letters,</i> 31&ndash;35.
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-sm-pull-9 text-center">
+                                <a href="assets/docs/tomelliott-honours.pdf" class="pdf-preview">
+                                    <img src="assets/img/honours-thumb.png" alt="">
+                                    <div class="read">
+                                        <p>
+                                            <i class="fa fa-4x fa-file-pdf-o"></i>
+                                            Read Dissertation
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-9 col-sm-offset-3">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
