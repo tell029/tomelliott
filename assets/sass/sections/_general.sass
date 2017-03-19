@@ -1,15 +1,6 @@
 section
-    margin-bottom: 5em
     padding: 5em 0
-    box-shadow: 2px 4px 10px rgba(0,0,0,0.2)
-    transition: all 1s ease-in-out
-
-    &:hover
-        transform: scale(1.01)
-
-@media (screen and min-width: $screen-md-min)
-    section
-        margin: 5em
+    min-height: 100vh
 
 
 h1, h2
@@ -18,3 +9,10 @@ h1, h2
     text-align: center
     color: $brand-primary-lighter
     border-bottom: solid 1px $brand-primary-lighter
+
+a
+    border-bottom: dotted 1px $link-color
+
+    &:hover
+        text-decoration: none
+        border-bottom-style: solid

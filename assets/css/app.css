@@ -1505,24 +1505,24 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container {
+.container, #researchItems .research-item {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, .container:after {
+  .container:before, #researchItems .research-item:before, .container:after, #researchItems .research-item:after {
     content: " ";
     display: table; }
-  .container:after {
+  .container:after, #researchItems .research-item:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container {
+    .container, #researchItems .research-item {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container {
+    .container, #researchItems .research-item {
       width: 970px; } }
   @media (min-width: 1200px) {
-    .container {
+    .container, #researchItems .research-item {
       width: 1170px; } }
 
 .container-fluid {
@@ -3716,15 +3716,17 @@ tbody.collapse.in {
     .navbar-fixed-bottom .navbar-collapse {
       max-height: 200px; } }
 
-.container > .navbar-header,
+.container > .navbar-header, #researchItems .research-item > .navbar-header,
 .container > .navbar-collapse,
+#researchItems .research-item > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
-    .container > .navbar-header,
+    .container > .navbar-header, #researchItems .research-item > .navbar-header,
     .container > .navbar-collapse,
+    #researchItems .research-item > .navbar-collapse,
     .container-fluid > .navbar-header,
     .container-fluid > .navbar-collapse {
       margin-right: 0;
@@ -3768,7 +3770,7 @@ tbody.collapse.in {
   .navbar-brand > img {
     display: block; }
   @media (min-width: 768px) {
-    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    .navbar > .container .navbar-brand, #researchItems .navbar > .research-item .navbar-brand, .navbar > .container-fluid .navbar-brand {
       margin-left: -15px; } }
 
 .navbar-toggle {
@@ -4282,17 +4284,17 @@ a.badge:hover, a.badge:focus {
     font-weight: 200; }
   .jumbotron > hr {
     border-top-color: #d5d5d5; }
-  .container .jumbotron, .container-fluid .jumbotron {
+  .container .jumbotron, #researchItems .research-item .jumbotron, .container-fluid .jumbotron {
     border-radius: 6px;
     padding-left: 15px;
     padding-right: 15px; }
-  .jumbotron .container {
+  .jumbotron .container, .jumbotron #researchItems .research-item, #researchItems .jumbotron .research-item {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     .jumbotron {
       padding-top: 48px;
       padding-bottom: 48px; }
-      .container .jumbotron, .container-fluid .jumbotron {
+      .container .jumbotron, #researchItems .research-item .jumbotron, .container-fluid .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
       .jumbotron h1,
@@ -10400,18 +10402,9 @@ button.close {
   clip: auto; }
 
 section {
-  margin-bottom: 5em;
   padding: 5em 0;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out; }
-  section:hover {
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01); }
+  min-height: 100vh; }
 
-@media (min-width: 992px) {
-  section {
-    margin: 5em; } }
 h1, h2 {
   margin-bottom: 2em;
   padding: 0 0 5px;
@@ -10419,11 +10412,38 @@ h1, h2 {
   color: #DFEDF7;
   border-bottom: solid 1px #DFEDF7; }
 
+a {
+  border-bottom: dotted 1px #4e85b2; }
+  a:hover {
+    text-decoration: none;
+    border-bottom-style: solid; }
+
 #about {
-  background: #83aac9;
-  line-height: 1.8;
-  text-align: center;
-  color: white; }
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background: #83aac9; }
+  #about .container, #about #researchItems .research-item, #researchItems #about .research-item {
+    background: #83aac9;
+    line-height: 1.8;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100%; }
+  @media (min-width: 992px) {
+    #about {
+      background: #fff; }
+      #about .container, #about #researchItems .research-item, #researchItems #about .research-item {
+        width: 80%;
+        padding: 5em 0; } }
+  #about a {
+    color: white;
+    border-bottom-color: white; }
 
 #research {
   background: #82CFAE;
@@ -10517,7 +10537,59 @@ h1, h2 {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse; }
   #researchItems .research-item {
-    width: calc(100% / 3); }
+    max-width: calc(100% / 3); }
+  #researchItems .pdf-preview {
+    display: inline-block;
+    border: none;
+    margin-top: 1em; }
+    #researchItems .pdf-preview img {
+      width: 20vw; }
+    #researchItems .pdf-preview .read {
+      display: inline-block;
+      margin-left: 2em;
+      border: none;
+      height: 100%;
+      vertical-align: middle; }
+      #researchItems .pdf-preview .read p {
+        margin: 0; }
+        #researchItems .pdf-preview .read p .fa {
+          margin-bottom: 10px;
+          display: block; }
+  @media (min-width: 768px) {
+    #researchItems .pdf-preview {
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      border-radius: 5px;
+      overflow: hidden; }
+      #researchItems .pdf-preview img {
+        width: 15vw; }
+      #researchItems .pdf-preview .read {
+        z-index: 10;
+        color: #3A688C;
+        position: absolute;
+        display: block;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        opacity: 0;
+        -webkit-transition: opacity 200ms ease-in-out;
+        transition: opacity 200ms ease-in-out; }
+        #researchItems .pdf-preview .read p {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%); }
+      #researchItems .pdf-preview:hover {
+        border: none; }
+        #researchItems .pdf-preview:hover .read {
+          opacity: 0.9;
+          font-weight: bold; } }
 
 #work {
   background: #8F8FD2; }

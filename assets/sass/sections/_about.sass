@@ -1,6 +1,28 @@
 #about
+    min-height: 100vh
+    padding: 0
+    margin: 0
+    position: relative
     background: $brand-primary
-    line-height: 1.8
-    text-align: center
-    // color: $brand-primary-darker
-    color: white
+
+    .container
+        background: $brand-primary
+        line-height: 1.8
+        text-align: center
+        color: white
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+
+    @media (screen and min-width: $screen-md-min)
+        background: $body-bg
+
+        .container
+            width: 80%
+            padding: 5em 0
+
+    a
+        color: white
+        border-bottom-color: white

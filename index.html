@@ -10,7 +10,7 @@
     </head>
     <body>
         <section id="about">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
                         <h1>Tom Elliott</h1>
@@ -39,7 +39,7 @@
 
 
         <section id="research">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
                         <h2>Research</h2>
@@ -69,53 +69,71 @@
                 </nav>
             </div>
 
-            <div id="researchItemContainer"><div id="researchItems">
-                <div class="container-fluid research-item" id="phd">
-                    <h3>
-                        Improving real-time prediction of bus arrival
-                    </h3>
+            <div id="researchItemContainer">
+                <div id="researchItems">
+                    <div class="container research-item" id="phd">
+                        <h3>
+                            Improving real-time prediction of bus arrival
+                        </h3>
 
-                    <p>
-                        <strong>The main goal of my current work is to model Auckland's entire public transport system in real time, in order to make reliable preditions about arrival time.</strong>
-                        The first piece of the puzzle involves a <strong>particle filter</strong> model to determine the <strong>speed</strong> (and other variables) based on the observed GPS position of all busses in the Auckland public transport network. The second piece is a <strong>Kalman filter</strong> that uses bus speeds from the particle filter to estimate the speed along <em>individual segments of road</em>.
-                        Finally, the estimated speeds will be used to predict how long it will take for each bus to travel from its current position to future stops.
-                    </p>
+                        <p>
+                            <strong>The main goal of my current work is to model Auckland's entire public transport system in real time, in order to make reliable preditions about arrival time.</strong>
+                            The first piece of the puzzle involves a <strong>particle filter</strong> model to determine the <strong>speed</strong> (and other variables) based on the observed GPS position of all busses in the Auckland public transport network. The second piece is a <strong>Kalman filter</strong> that uses bus speeds from the particle filter to estimate the speed along <em>individual segments of road</em>.
+                            Finally, the estimated speeds will be used to predict how long it will take for each bus to travel from its current position to future stops.
+                        </p>
 
-                    <p>
-                        <strong>What is a particle filter?</strong>
-                        Basically, parallel universes.
-                        But itsead of universes, we have busses! A whole fleet of imaginary&mdash;but plausible&mdash;busses, all traveling along the route at different speeds, some stopping at bus stops and traffic lights while others don't.
-                        Then, whenever we receive a GPS position update from the <strong>real bus</strong>, we delete the imaginary busses that aren't in roughly the same place.
-                    </p>
+                        <p>
+                            <strong>What is a particle filter?</strong>
+                            Basically, parallel universes.
+                            But itsead of universes, we have busses! A whole fleet of imaginary&mdash;but plausible&mdash;busses, all traveling along the route at different speeds, some stopping at bus stops and traffic lights while others don't.
+                            Then, whenever we receive a GPS position update from the <strong>real bus</strong>, we delete the imaginary busses that aren't in roughly the same place.
+                        </p>
 
-                    <p>
-                      <strong>And how about that Kalman filter you mentioned?</strong>
-                      This is just a way of <strong>updating</strong> a previous estimate when we receive a new observation, allowing the <strong>state</strong> (speed along a section of road) to change over time, but also allowing for uncertainty in the measurements (bus speeds).
-                      The more busses that recently traveled down a piece of road, the better our estimate of the average speed&mdash;and how variable it is: did the busses travel at similar speeds, or were they quite different?
-                    </p>
+                        <p>
+                          <strong>And how about that Kalman filter you mentioned?</strong>
+                          This is just a way of <strong>updating</strong> a previous estimate when we receive a new observation, allowing the <strong>state</strong> (speed along a section of road) to change over time, but also allowing for uncertainty in the measurements (bus speeds).
+                          The more busses that recently traveled down a piece of road, the better our estimate of the average speed&mdash;and how variable it is: did the busses travel at similar speeds, or were they quite different?
+                        </p>
+                    </div>
+
+                    <div class="container-fluid research-item" id="msc">
+                        <h3>
+                            Bayesian modelling of the size-selectivity of fishing gear
+                        </h3>
+
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <p>
+                                    <strong>Abstract:</strong>
+                                    The size-selectivity of fishing gear is of particular interest to fisheries managers, aiding in the reduction of by-catch and increase of profits. Size-selectivity models have typically been fitted using <span data-tooltip aria-haspopup="true" class="has-tip" title="Generalised Linear Models">GLMs</span> and mixed-effects models implemented using software such as SAS. We investigate a Bayesian approach to fitting these models, with special focus on the comparability of frequentist and Bayesian models. We look at several case studies, which are used to establish the validity of our models by comparing our results to those published in previous analyses. <span data-tooltip aria-haspopup="true" class="has-tip" title="Mackov chain Monte Carlo">MCMC</span> diagnostic tests and <span data-tooltip aria-haspopup="true" class="has-tip" title="Posterior Predictive Checks">PPCs</span> for overdispersion are explored, and random-effects are shown to be the preferred method of modelling overdispersion in the data. Having formulated a general model, several extensions are investigated. The Poisson distribution is used as an alternative likelihood function, allowing the models to make use of any population size distribution information, and multiple random-effects models are implemented that were previously found to be too complex. Semiparametric selection curves&mdash;notably basis splines&mdash;are used with the constraint that they be continuous, non-decreasing functions of length. A new R package, <code>BSM</code>, is introduced as a simple tool for fitting many of the Bayesian selectivity models discussed in this thesis.
+                                </p>
+                            </div>
+
+                            <div class="col-sm-4 text-center">
+                                <a href="assets/docs/tomelliott-masters.pdf" class="pdf-preview">
+                                    <img src="assets/img/masters-thumb.png" alt="">
+                                    <div class="read">
+                                        <p>
+                                            <i class="fa fa-4x fa-file-pdf-o"></i>
+                                            Read Thesis
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid research-item" id="bsc">
+                        <h3>
+                            Bayesian estimation of undetectable reverberation lags
+                        </h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eos quis, repellendus tenetur! Mollitia eligendi ducimus necessitatibus itaque, animi quos quia eum labore, amet ea totam delectus molestias assumenda. Sunt!</p>
+                        <p>Deleniti voluptas mollitia illum amet voluptates perferendis quidem officiis pariatur minima et earum dignissimos inventore veniam quaerat, explicabo id odio dolore voluptate aperiam suscipit quae a. Nihil laboriosam laudantium aliquid.</p>
+                        <p>Tempore deserunt minus totam iure harum, ea esse necessitatibus sapiente cum assumenda doloremque deleniti! Asperiores reprehenderit ullam voluptate repudiandae quasi pariatur autem. Nesciunt sapiente deleniti dolore quos accusamus, recusandae fuga.</p>
+                    </div>
                 </div>
-
-                <div class="container-fluid research-item" id="msc">
-                    <h3>
-                        Bayesian modelling of the size-selectivity of fishing gear
-                    </h3>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium possimus ratione ipsa quia excepturi exercitationem blanditiis, quae accusamus totam ipsam fugiat consequuntur, dolor officiis corrupti. Veritatis eum repudiandae molestiae commodi.</p>
-                    <p>Quo aliquid quae dolores error veniam saepe, iste ratione nobis consequatur ullam quasi, corporis, esse provident eaque molestiae earum illum quos magni soluta praesentium incidunt. Accusantium consectetur fuga dolor iste.</p>
-                    <p>Pariatur deleniti voluptates fugit doloremque tenetur aut, possimus molestias sed modi quasi mollitia minus quod nemo eos accusamus doloribus consequatur dolore explicabo fugiat omnis. Quidem earum, porro commodi molestiae eveniet!</p>
-                    <p>Pariatur earum, omnis at mollitia aperiam ad sed excepturi libero facilis voluptatibus et modi, corrupti fugit, inventore accusantium, maxime nesciunt neque dolores cumque nam maiores quia odio ex! Alias, ipsa.</p>
-                </div>
-
-                <div class="container-fluid research-item" id="bsc">
-                    <h3>
-                        Bayesian estimation of undetectable reverberation lags
-                    </h3>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eos quis, repellendus tenetur! Mollitia eligendi ducimus necessitatibus itaque, animi quos quia eum labore, amet ea totam delectus molestias assumenda. Sunt!</p>
-                    <p>Deleniti voluptas mollitia illum amet voluptates perferendis quidem officiis pariatur minima et earum dignissimos inventore veniam quaerat, explicabo id odio dolore voluptate aperiam suscipit quae a. Nihil laboriosam laudantium aliquid.</p>
-                    <p>Tempore deserunt minus totam iure harum, ea esse necessitatibus sapiente cum assumenda doloremque deleniti! Asperiores reprehenderit ullam voluptate repudiandae quasi pariatur autem. Nesciunt sapiente deleniti dolore quos accusamus, recusandae fuga.</p>
-                </div>
-            </div></div>
+            </div>
         </section>
 
 
