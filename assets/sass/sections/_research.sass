@@ -1,9 +1,9 @@
 $research-col-main: $brand-success-darker
-$research-col-alt: $brand-primary-darker
+$research-col-alt: $brand-success-darker
 // $research-col-alt: $brand-success-lighter
 
 #research
-    background: $brand-success
+    background: $body-bg
     overflow: hidden
     color: #333333
 
@@ -13,6 +13,9 @@ $research-col-alt: $brand-primary-darker
 
     h3
         color: $research-col-main
+
+    strong
+        color: $brand-primary-darker
 
 
 #researchnav
@@ -42,7 +45,7 @@ $research-col-alt: $brand-primary-darker
                 height: 20px
                 transform: translateX(-50%)
                 text-align: center
-                color: $brand-primary-darker
+                color: $research-col-alt
                 opacity: 0
                 transition: opacity 100ms ease-in-out
 
@@ -56,7 +59,7 @@ $research-col-alt: $brand-primary-darker
                 height: 10px
                 width: 10px
                 transform: translate(-5px, 6px)
-                background: $brand-success
+                background: $body-bg
                 border: solid 2px $research-col-alt
                 border-radius: 5px
                 transition: background 200ms ease-in-out
@@ -161,12 +164,12 @@ $research-col-alt: $brand-primary-darker
                     opacity: 0.9
                     font-weight: bold
 
-    .thumbnail
+    .reflist
         margin-top: 2em
         padding: 1em
         font-size: 0.9em
-        background: $brand-success-lighter
-        box-shadow: 5px 6px 7px rgba(0,0,0,0.2)
+        // background: transparentize($brand-primary-lighter, 0.7)
+        // box-shadow: 5px 6px 7px rgba(0,0,0,0.2)
 
         .fa
             margin-right: 0.5em

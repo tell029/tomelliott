@@ -12,4 +12,10 @@ $(document).ready(function() {
         // translate body
         $("#researchItemContainer").css("transform", "translateX(-" + $ind * 100 + "%)");
     });
+
+    // $(".gallery").slick();//{
+    //     infinite: true,
+    //     slidesToShow: 3,
+    //     slidestoScroll: 1
+    // });
 });

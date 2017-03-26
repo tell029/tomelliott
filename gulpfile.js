@@ -8,6 +8,7 @@ var reload = browserSync.reload;
 
 var jquery = './node_modules/jquery';
 var bootstrap = './node_modules/bootstrap-sass';
+var slick = './assets/slick/slick';
 
 gulp.task('sass', function() {
     gulp.src([bootstrap + '/assets/fonts/bootstrap/*'])
@@ -23,6 +24,7 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
     gulp.src([jquery + '/dist/jquery.min.js',
               bootstrap + '/assets/javascripts/bootstrap.min.js',
+              slick + '/slick.min.js',
               'assets/scripts/*.js'])
         .pipe(concat('app.min.js'))
         .pipe(uglify())
