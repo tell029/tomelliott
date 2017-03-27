@@ -7,7 +7,7 @@
         border: none
 
     .text-lg
-        font-size: 2.3em
+        font-size: 1.4em
 
     a
         border: none
@@ -19,7 +19,12 @@
     .right-lg, .left-lg
         text-align: center
 
+    @media (min-width: $screen-sm-min)
+        .text-lg
+            font-size: 2em
     @media (min-width: $screen-md-min)
+        .text-lg
+            font-size: 2.6em
         .right-lg
             text-align: right
             border-right: solid 1px $brand-primary
