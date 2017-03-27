@@ -8,11 +8,14 @@ var reload = browserSync.reload;
 
 var jquery = './node_modules/jquery';
 var bootstrap = './node_modules/bootstrap-sass';
+var fontawesome = './node_modules/font-awesome';
 var slick = './assets/slick/slick';
 
 gulp.task('sass', function() {
     gulp.src([bootstrap + '/assets/fonts/bootstrap/*'])
         .pipe(gulp.dest('assets/fonts/bootstrap'));
+    gulp.src([fontawesome + '/fonts/*'])
+        .pipe(gulp.dest('assets/fonts/font-awesome'));
     return sass('assets/sass/app.sass')
         .pipe(autoprefixer())
         .pipe(gulp.dest('assets/css'))
