@@ -21,7 +21,7 @@
                     <div class="col-sm-8 col-sm-offset-2">
                         <p class="research">
                             As a <a href="#research">statistics PhD candidate</a> at the University of Auckland,
-                            I spend my days researching how to model busses in real-time,
+                            I spend my days researching how to model buses in real-time,
                             and then use this to make improved predictions of arrival time
                             and travel time.
                         </p>
@@ -78,21 +78,21 @@
 
                         <p>
                             <strong>The main goal of my current work is to model Auckland's entire public transport system in real time, in order to make reliable preditions about arrival time.</strong>
-                            The first piece of the puzzle involves a <strong>particle filter</strong> model to determine the <strong>speed</strong> (and other variables) based on the observed GPS position of all busses in the Auckland public transport network. The second piece is a <strong>Kalman filter</strong> that uses bus speeds from the particle filter to estimate the speed along <em>individual segments of road</em>.
+                            The first piece of the puzzle involves a <strong>particle filter</strong> model to determine the <strong>speed</strong> (and other variables) based on the observed GPS position of all buses in the Auckland public transport network. The second piece is a <strong>Kalman filter</strong> that uses bus speeds from the particle filter to estimate the speed along <em>individual segments of road</em>.
                             Finally, the estimated speeds will be used to predict how long it will take for each bus to travel from its current position to future stops.
                         </p>
 
                         <p>
                             <strong>What is a particle filter?</strong>
                             Basically, parallel universes.
-                            But instead of universes, we have busses! A whole fleet of imaginary&mdash;but plausible&mdash;busses, all traveling along the route at different speeds, some stopping at bus stops and traffic lights while others don't.
-                            Then, whenever we receive a GPS position update from the <strong>real bus</strong>, we delete any imaginary busses that are no longer plausible (i.e., near the observed location).
+                            But instead of universes, we have buses! A whole fleet of imaginary&mdash;but plausible&mdash;buses, all traveling along the route at different speeds, some stopping at bus stops and traffic lights while others don't.
+                            Then, whenever we receive a GPS position update from the <strong>real bus</strong>, we delete any imaginary buses that are no longer plausible (i.e., near the observed location).
                         </p>
 
                         <p>
                           <strong>And how about that Kalman filter you mentioned?</strong>
                           This is just a way of <strong>updating</strong> a previous estimate when we receive a new observation, allowing the <strong>state</strong> (speed along a section of road) to change over time, but also allowing for uncertainty in the measurements (bus speeds).
-                          The more busses that recently traveled down a piece of road, the better our estimate of the average speed&mdash;and how variable it is: did the busses travel at similar speeds, or were they quite different?
+                          The more buses that recently traveled down a piece of road, the better our estimate of the average speed&mdash;and how variable it is: did the buses travel at similar speeds, or were they quite different?
                         </p>
                     </div>
 
