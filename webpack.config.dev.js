@@ -10,6 +10,9 @@ module.exports = {
   optimization: {
       minimize: false
   },
+  externals: {
+    jquery: 'jQuery'
+  },
   module: {
     rules: [{
       test: /\.js?$/,

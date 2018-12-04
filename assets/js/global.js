@@ -5,3 +5,4 @@ export default class Global {
     svg4everybody();
   }
 }
+

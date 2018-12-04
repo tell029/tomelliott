@@ -18,6 +18,9 @@ module.exports = {
   optimization: {
       minimize: true
   },
+  externals: {
+    jquery: 'jQuery'
+  },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.LoaderOptionsPlugin({
