@@ -15,11 +15,15 @@ $margin-end: margin-right;
 
 /* Colors */
 
-$color_body_copy: #444;
+$color_body_copy: #ccc;
 $color_link: #26527c;
 $color_opposite: #fff;
 
 /* Font Sizes */
+
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+$font-family: "Poiret One", "Arial", sans-serif;
 
 $size_base: 1em;
 

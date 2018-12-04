@@ -92,7 +92,7 @@ gulp.task('postcss:dev', function() {
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(buildpath.css))
       .pipe(browserSync.stream({
-          match: "**/*.css"
+          match: "**/*.*css"
       }));
 });
 
