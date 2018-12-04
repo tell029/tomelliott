@@ -5,6 +5,13 @@ body {
     height: 100%;
     font-family: $font-family;
     color: $color-body-copy;
+
+    a {
+        color: $color-link;
+        &:hover {
+            color: $color-link;
+        }
+    }
 }
 
 .visually-hidden {

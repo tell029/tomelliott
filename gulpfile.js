@@ -25,12 +25,13 @@ const buildpath = {
   js: 'public/js/',
   css: 'public/css/',
   images: 'public/images/',
-  favicon: 'public/favicon/'
+  favicon: 'public/favicon/',
+  fonts: 'public/fonts/'
 };
 
 const stylesheets = ['assets/sass/style-rtl.scss', 'assets/sass/style-ltr.scss'];
 
-gulp.task('copy', ['copy:favicon', 'copy:images', 'copy:robots']);
+gulp.task('copy', ['copy:favicon', 'copy:images', 'copy:robots', 'copy:fonts']);
 
 gulp.task('copy:robots', function (cb) {
   return gulp.src(['assets/robots.txt'])
@@ -42,6 +43,13 @@ gulp.task('copy:robots', function (cb) {
 gulp.task('copy:favicon', function (cb) {
   return gulp.src(['assets/favicon/**/*'])
     .pipe(copy(buildpath.favicon, {
+      prefix: 2
+    }));
+});
+
+gulp.task('copy:fonts', function (cb) {
+  return gulp.src(['assets/fonts/**/*'])
+    .pipe(copy(buildpath.fonts, {
       prefix: 2
     }));
 });
