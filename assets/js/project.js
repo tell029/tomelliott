@@ -1,20 +1,53 @@
 export default class Project {
   constructor() {
-    this.active = -1;
+    this.active = -2;
     // add handler
-    var p = this;
-    $(".project-item").on("click", function() {
-      if (p.active >= 0){
-        $(".project-item").eq(p.active).find('.project-body').slideUp();
-      }
-      const i = $(".project-item").index($(this));
-      if (i == p.active) {
-        p.active = -1;
-        return;
-      }
-      p.active = i;
-      $(".project-item").eq(p.active).find('.project-body').slideDown();
+    const _this = this;
+    $(".project-item label").on("click", (e) => {
+      this.clickHandler(e.currentTarget.parentNode);
     });
-    // then make first one visible
+
+    // then make first one visible when scrolled to
+    // this.top = $(".project-list").offset().top;
+    // $(window).scroll(() => {
+    //   const win = $(window);
+    //   if (this.active == -2 && win.scrollTop() + win.height()*0.75 > this.top) {
+    //     this.active = 0;
+    //     this.show(0);
+    //   }
+    // });
+  }
+
+  clickHandler(proj) {
+    const i = $(".project-item").index( proj );
+
+    if (i == this.active) {
+      this.hide(this.active);
+      this.active = -1;
+      return;
+    };
+
+    // hide the currently active project
+    this.hide(this.active);
+
+    // show clicked one if different from active
+    this.active = i;
+    this.show(this.active);
+  }
+
+  show (i) {
+    if (this.active < 0) return;
+    $(".project-item")
+      .eq(i)
+      .find('.project-body')
+      .slideDown();
+  }
+
+  hide (i) {
+    if (this.active < 0) return;
+    $(".project-item")
+      .eq(i)
+      .find('.project-body')
+      .slideUp();
   }
 }

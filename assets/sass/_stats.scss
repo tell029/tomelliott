@@ -1,9 +1,9 @@
-$project-label-color: $color_body_copy;
+$project-label-color: transparentize($color_body_copy, 0.8);
 
 .sec-stats {
     background: #333;
     background-image: linear-gradient(#444, #333);
-    padding-top: 1em;
+    padding: 1em 0;
     margin-bottom: 1000px;
 
     .project-list {
@@ -12,31 +12,35 @@ $project-label-color: $color_body_copy;
         padding: 0;
 
         .project-item {
-            // border-top: solid 1px $color_body_copy;
-
             label {
                 display: block;
-                // background: $project-label-color;
+                padding: 0.4em 0.4em;
+                margin: 0 0 0em;
+                background: $project-label-color;
                 color: $color-link;
-                padding: 0.1em 0.4em;
-                margin: 0;
-                border-left: solid 3px $project-label-color;
+                font-size: 0.9em;
 
                 &:hover {
                     text-decoration: underline;
                     cursor: pointer;
+                    background: opacify($project-label-color, 0.1);
+                }
+
+                strong {
+                    font-size: 1rem;
+                    display: block;
                 }
             }
 
+            margin-bottom: 0.4em;
+            &:last-child {
+                border-bottom: solid 3px $project-label-color;
+            }
+
+
             .project-body {
                 display: none;
-                // background: #353535;
                 padding: 0.1em 0.4em;
-                border-left: solid 1px $project-label-color;
-
-                // &.visible {
-                //     display: block;
-                // }
             }
         }
     }
