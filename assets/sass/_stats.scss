@@ -1,4 +1,4 @@
-$project-label-color: transparentize($color_body_copy, 0.8);
+$project-label-color: #454d58;//($color_body_copy, 0.9);
 
 .sec-stats {
     background: #333;
@@ -8,7 +8,7 @@ $project-label-color: transparentize($color_body_copy, 0.8);
 
     .project-list {
         list-style-type: none;
-        margin: 0;
+        margin: 0 0 2em;
         padding: 0;
 
         .project-item {
@@ -23,7 +23,7 @@ $project-label-color: transparentize($color_body_copy, 0.8);
                 &:hover {
                     text-decoration: underline;
                     cursor: pointer;
-                    background: opacify($project-label-color, 0.1);
+                    background: lighten($project-label-color, 3);
                 }
 
                 strong {
@@ -33,14 +33,14 @@ $project-label-color: transparentize($color_body_copy, 0.8);
             }
 
             margin-bottom: 0.4em;
-            &:last-child {
-                border-bottom: solid 3px $project-label-color;
-            }
+            // &:last-child {
+            //     border-bottom: solid 3px $project-label-color;
+            // }
 
 
             .project-body {
                 display: none;
-                padding: 0.1em 0.4em;
+                padding: 0.4em 0.4em;
             }
         }
     }
