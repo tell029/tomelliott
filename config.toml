@@ -1,0 +1,28 @@
+baseURL = "http://tomelliott.co.nz"
+languageCode = "en-gb"
+title = "Tom Elliott"
+theme = "hermit"
+
+[author]
+    name = "Tom Elliott"
+
+[params]
+    author = "Tom Elliott"
+
+    homeSubtitle = "Lead developer of iNZight and PhD candidate at the University of Auckland"
+
+    [[params.social]]
+        name = "twitter"
+        url = "https://twitter.com/tomelliottnz"
+    [[params.social]]
+        name = "github"
+        url = "https://github.com/tmelliott"
+    [[params.social]]
+        name = "email"
+        url = "mailto:tom@tomelliott.co.nz"
+
+    [[params.links]]
+        iconset = "fas"
+        icon = "info-circle"
+        title = "Additional information"
+        url = "#info"
